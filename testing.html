@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+     <!-- Site Metas -->
+    <title>Shorat</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favcon1 (1) (1).ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <div class="loader">
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__ball"></div>
+		</div>
+    </div><!-- end loader -->
+    <!-- END LOADER -->
+    
+	<div class="top-bar">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<div class="left-top">
+						<div class="email-box">
+							<a href="mailto:admin@shoratinnovations.com?subject=Inquiry"><i class="fa fa-envelope-o" aria-hidden="true"></i>admin@shoratinnovations.com </a>
+						</div>
+						<div class="phone-box">
+							<a href="tel:1234567890"><i class="fa fa-phone" aria-hidden="true"></i> +91 89 5656 9681</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6">
+					<div class="right-top">
+						<div class="social-media1" style="float: right;">
+                            <a href="https://www.instagram.com/shoratinnovations?igsh=bDlsMWtqOWJiN2Fw&utm_source=qr" target="_blank" class="fab fa-instagram" style="background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); -webkit-background-clip:text;
+                            -webkit-text-fill-color: transparent;"></a>
+                             <a href="https://www.linkedin.com/company/shorat-innovations/>" target="_blank" class="fab fa-linkedin"></a>
+                            <a href="https://www.youtube.com/@Programming_with_akshay_sir" target="_blank" class="fab fa-youtube" style="color: red;"></a>
+                           
+                            <a href="https://www.facebook.com/share/vESBnTsrXPKB7SqC/?mibextid=LQQJ4d" target="_blank" class="fab fa-facebook-f"></a>
+                            
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <header class="header header_style_01">
+        <nav class="megamenu navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="images/logos/shorat.png" alt="image"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a class="active" href="courses.html">Courses</a></li>
+                        <li><a href="internship.html">Internship</a></li>
+                        <li><a href="courses.html">Team</a></li>
+						<li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    
+    
+   
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #515555;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header1 {
+            background-color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .header1 h1 {
+            color: black;
+            margin: 0;
+            font-size: 40px;
+        }
+
+        .header1 p {
+            color: black;
+            margin: 10px 0 0 0;
+            font-size: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .training-content {
+            width: 65%;
+        }
+
+        h2 {
+            color: white;
+        }
+
+        .accordion {
+            margin-top: 20px;
+        }
+
+        .accordion-button {
+            font-weight: bold;
+            background-color: #e65454;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .accordion-button .icon {
+            transition: transform 0.4s;
+        }
+
+        .active .icon {
+            transform: rotate(90deg);
+        }
+
+        .active, .accordion-button:hover {
+            background-color: #f33636;
+        }
+
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .accordion-button.active + .panel {
+            max-height: 500px; /* Adjust based on your content */
+        }
+
+        .sidebar {
+            width: 30%;
+            padding: 10px;
+        }
+
+         .benefits-box {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+         .contact-box{
+            margin: 10px;
+         }
+        
+
+        .contact-box h3, .benefits-box h3 {
+            margin-top: 0;
+        }
+
+        .contact-box p, .benefits-box ul {
+            margin: 10px 0;
+        }
+
+        .benefits-box ul {
+            padding-left: 20px;
+        }
+
+        .benefits-box li {
+            margin-bottom: 10px;
+        }
+
+        .training-details {
+            font-family: Arial, sans-serif;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .training-details h3 {
+            margin-top: 0;
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+            }
+
+            .training-content, .sidebar {
+                width: 100%;
+                flex: none;
+                padding: 0;
+                margin-bottom: 20px;
+            }
+
+            .header1 h1 {
+                font-size: 32px;
+            }
+
+            .header1 p {
+                font-size: 16px;
+            }
+
+            .accordion-button {
+                font-size: 16px;
+                padding: 10px;
+            }
+
+            .panel {
+                padding: 0 10px;
+            }
+
+            .contact-box, .benefits-box {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header1 h1 {
+                font-size: 28px;
+            }
+
+            .header1 p {
+                font-size: 14px;
+            }
+
+            .accordion-button {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            .panel {
+                padding: 0 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header1">
+        <h1>Software Testing</h1>
+        <p>
+            Master the art of ensuring software quality with our comprehensive Software Testing Training program at Shorat Innovations Pvt Ltd. This course is designed to provide you with in-depth knowledge and practical skills in both manual and automation testing, empowering you to excel in the ever-evolving software industry.
+        </p>
+            </div>
+
+    <div class="container">
+        <div class="training-content">
+            <h2>Training Content</h2>
+            <div class="accordion">
+                <button class="accordion-button" id="c-button">Introduction to Software Testing
+                    <span class="icon">▶</span>
+                </button>
+                <div class="panel" id="c-panel">
+                    <ul>
+        <li>What is Software Testing?</li>
+        <li>Importance and Objectives of Testing</li>
+        <li>Software Development Life Cycle (SDLC) and Testing Life Cycle (STLC)</li>
+        <li>Types of Software Testing
+            <ul>
+                <li>Manual Testing</li>
+                <li>Automation Testing</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+    
+                    <button class="accordion-button">Testing Techniques
+                    <span class="icon">▶</span></button>
+
+                    <div class="panel">
+                        
+                        <ul>
+                            <li>Black Box Testing</li>
+                            <li>White Box Testing</li>
+                            <li>Grey Box Testing</li>
+                            <li>Test Case Design Techniques
+                                <ul>
+                                    <li>Equivalence Partitioning</li>
+                                    <li>Boundary Value Analysis</li>
+                                    <li>Decision Table Testing</li>
+                                    <li>State Transition Testing</li>
+                                </ul>
+                            </li>
+                        </ul>
+                                    </div>
+
+                <button class="accordion-button" id="cpp-button">Manual Testing
+                    <span class="icon">▶</span>
+                </button>
+                <div class="panel" id="cpp-panel">
+                    <ul>
+                        <li>Test Plan and Strategy</li>
+                        <li>Writing and Executing Test Cases</li>
+                        <li>Test Data Preparation</li>
+                        <li>Bug Life Cycle</li>
+                        <li>Reporting and Tracking Defects</li>
+                        <li>Software Testing Tools Overview (Jira, Bugzilla, etc.)</li>
+                    </ul>
+                 </div>
+                 <button class="accordion-button" id="cpp-button">Automation  Testing
+                    <span class="icon">▶</span>
+                </button>
+                <div class="panel" id="cpp-panel">
+                    <ul>
+                        <li>Introduction to Automation Testing</li>
+                        <li>Benefits of Automation</li>
+                        <li>Introduction to Selenium
+                            <ul>
+                                <li>Selenium IDE, WebDriver, Grid</li>
+                                <li>Writing Test Scripts in Selenium</li>
+                                <li>Handling Web Elements (Text, Buttons, Dropdowns, etc.)</li>
+                                <li>Locators and XPath</li>
+                            </ul>
+                        </li>
+                        <li>TestNG Framework</li>
+                        <li>Data-Driven Testing</li>
+                        <li>Automation Framework Design</li>
+                    </ul>
+                    </div>
+                    <button class="accordion-button" id="cpp-button">Performance   Testing
+                        <span class="icon">▶</span>
+                    </button>
+                    <div class="panel" id="cpp-panel">
+                        <ul>
+                            <li>Basics of Performance Testing</li>
+                            <li>Load Testing, Stress Testing, and Scalability Testing</li>
+                            <li>Introduction to JMeter
+                                <ul>
+                                    <li>Setting Up JMeter</li>
+                                    <li>Writing Performance Test Plans</li>
+                                    <li>Analyzing Test Results</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    
+                </div>
+                <button class="accordion-button" id="cpp-button">API Testing
+                    <span class="icon">▶</span>
+                </button>
+                <div class="panel" id="cpp-panel">
+                    <ul>
+                        <li>Introduction to APIs</li>
+                        <li>Basics of API Testing</li>
+                        <li>HTTP Methods (GET, POST, PUT, DELETE)</li>
+                        <li>Testing RESTful APIs</li>
+                        <li>Tools: Postman, SOAPUI</li>
+                        <li>Writing API Test Scripts</li>
+                    </ul>
+                </div>
+                <button class="accordion-button" id="cpp-button">Mobile Application  Testing
+                    <span class="icon">▶</span>
+                </button>
+                <div class="panel" id="cpp-panel">
+                    <ul>
+                        <li>Types of Mobile Apps (Native, Web, Hybrid)</li>
+                        <li>Mobile Testing Strategies</li>
+                        <li>Testing on Real Devices vs Emulators</li>
+                        <li>Mobile Automation Tools: Appium</li>
+                    </ul>
+         </div>
+         <button class="accordion-button" id="cpp-button">Agile and DevOps Testing
+            <span class="icon">▶</span>
+        </button>
+        <div class="panel" id="cpp-panel">
+            <ul>
+                <li>Overview of Agile Methodology</li>
+                <li>Role of Testing in Agile</li>
+                <li>Continuous Integration/Continuous Deployment (CI/CD)</li>
+                <li>Testing in DevOps Pipeline</li>
+            </ul>
+         </div>
+         <button class="accordion-button" id="cpp-button">Security Testing
+            <span class="icon">▶</span>
+        </button>
+        <div class="panel" id="cpp-panel">
+            <ul>
+                <li>Basics of Security Testing</li>
+                <li>Common Security Vulnerabilities (SQL Injection, XSS, etc.)</li>
+                <li>Tools for Security Testing
+                    <ul>
+                        <li>OWASP ZAP</li>
+                        <li>Burp Suite</li>
+                    </ul>
+                </li>
+                <li>Writing Secure Test Cases</li>
+            </ul>
+                 </div>
+         <button class="accordion-button" id="cpp-button">Advanced Testing Concepts
+            <span class="icon">▶</span>
+        </button>
+        <div class="panel" id="cpp-panel">
+            <ul>
+                <li>Introduction to Cloud Testing</li>
+                <li>Big Data Testing Basics</li>
+                <li>AI and ML in Testing</li>
+                <li>Emerging Trends in Software Testing</li>
+            </ul>
+                 </div>
+        </div>
+    </div>
+
+        <div class="sidebar">
+            <div class="contact-box">
+                <button id="lightning-button" class="lightning-btn" onclick="window.location.href='contact.html';">Enroll Now</button>
+            </div>
+            <div class="benefits-box">
+                <h3>Benefits of the Training</h3>
+                <ul>
+                    <li>100% placement assistance</li>
+                    <li>Experienced Trainers</li>
+                    <li>ISO Certificate</li>
+                    <li>Mock Interviews</li>
+                    <li>Weekly Test</li>
+                    <li>Individual Trainers</li>
+                    <li>Resume Building</li>
+                    <li>Interview Preparation</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="training-details">
+        <h3>Training Details</h3>
+        <p>At the end of the Software Testing Training Program, you will be able to effectively test software applications using both manual and automation testing techniques, ensuring high-quality and reliable software solutions.</p>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion-button");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                // Toggle the active class for the button
+                this.classList.toggle("active");
+
+                // Toggle the associated panel
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+
+   
+    
+
+    
+            
+
+       
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- First Column -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <img src="images/logos/shorat.png" alt="Company Logo" />
+                        </div>
+                        <h2>Head office </h2>
+                            <p style="color: black;">Office no 104, Rainbow Crossroads , Bakori Phata , Wagholi , pune.
+                            <p style="color: black;">Phone : <br>
+                                8956569681  /
+                            9130067841 </p>
+                            <h2>Branch 2</h2>
+                            <p style="color: black;">Bhutkarwadi chowk,near hanuman mandir,Balikashram road , Ahilyanagar
+                            <p style="color: black;">Phone : <br>
+                                8956007459</p>
+                        <div class="social-media1">
+                            <a href="https://www.instagram.com/shoratinnovations?igsh=bDlsMWtqOWJiN2Fw&utm_source=qr" target="_blank" class="fa fa-instagram" style="background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); -webkit-background-clip:text;
+                        -webkit-text-fill-color: transparent;"></a>
+                         <a href="https://www.linkedin.com/company/shorat-innovations/>" target="_blank" class="fa fa-linkedin"></a>
+                        <a href="https://www.youtube.com/@Programming_with_akshay_sir" target="_blank" class="fa fa-youtube" style="color: red;"></a>
+                       
+                        <a href="https://www.facebook.com/share/vESBnTsrXPKB7SqC/?mibextid=LQQJ4d" target="_blank" class="fa fa-facebook-f"></a>
+                            
+                        </div>
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+                
+    
+                <!-- Second Column -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Pages</h3>
+                        </div>
+                        <ul class="footer-links hov">
+                            <li><a href="index.html">Home <span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="about-us.html">About Us <span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="services.html">Our Services <span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="courses.html">Courses <span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="internship.html">Internship <span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="team.html">Team <span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="contact.html">Contact <span class="icon icon-arrow-right2"></span></a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+    
+                <!-- Third Column -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Services</h3>
+                        </div>
+                        <ul class="footer-links hov">
+                            <li><a href="#">Mobile App<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="#">Software Developmet<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="#">Web Development<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="#">Graphic Design<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="#">Digital Media Marketing<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="#">Billing Software<span class="icon icon-arrow-right2"></span></a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Courses</h3>
+                        </div>
+                        <ul class="footer-links hov">
+                            <li><a href="#">Full Stack Development<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="#">Web Development<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="#">Data Analyst<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="#">Android Development<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="#">Data Science<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="#">Flutter Development<span class="icon icon-arrow-right2"></span></a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+    
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </footer><!-- end footer -->
+
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-left">                   
+                    <p class="footer-company-name">All Rights Reserved. &copy; 2024 <a href="#">Shorat Innovations Pvt Ltd</a> </p>
+                </div>
+
+                
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/hoverdir.js"></script>    
+
+</body>
+</html>

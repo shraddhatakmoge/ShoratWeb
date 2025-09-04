@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+     <!-- Site Metas -->
+    <title>Shorat Innovations</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favcon1 (1) (1).ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/favcon1 (1) (1).ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+   
+    <!-- Modernizer for Portfolio -->
+    <script src="js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        @media (max-width: 768px) {
+    /* Top Bar Mobile */
+    .top-bar {
+        font-size: 12px;
+    }
+    
+    .left-top {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .right-top {
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    .social-media1 {
+        float: none !important;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .social-media1 a {
+        margin: 0;
+    }
+
+    /* Header Mobile */
+    .navbar-header {
+        float: none;
+    }
+    
+    .navbar-toggle {
+        display: block;
+        margin-top: 15px;
+    }
+    
+    .navbar-collapse {
+        border-top: 1px solid #e7e7e7;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+    
+    .navbar-nav {
+        float: none !important;
+        margin: 7.5px -15px;
+    }
+    
+    .navbar-nav > li {
+        float: none;
+    }
+    
+    .navbar-nav > li > a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    /* Slider Mobile */
+    .slider-item {
+        height: 300px;
+    }
+    
+    .homepage-three-title {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+    
+    .slide-text h2 {
+        font-size: 18px;
+    }
+    
+    .slider-content-area {
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+
+
+/* Small Phone Styles */
+@media (max-width: 480px) {
+    .top-bar {
+        padding: 5px 0;
+    }
+    
+    .navbar-brand img {
+        max-height: 40px;
+    }
+    
+    .homepage-three-title {
+        font-size: 24px;
+    }
+    
+    .slide-text h2 {
+        font-size: 16px;
+    }
+    
+    .slider-item {
+        height: 250px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .slide-text h1 {
+        font-size: 24px; /* Reduce font size */
+        word-wrap: break-word; /* Ensure text wraps properly */
+        line-height: 1.2; /* Adjust line height */
+    }
+
+    .slide-text h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+}
+/* Default layout for larger screens (words stay inline) */
+.homepage-three-title {
+    display: inline-block; /* Default inline */
+    text-align: center;
+}
+
+/* Grid layout for mobile screens */
+@media screen and (max-width: 768px) {
+    .homepage-three-title {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr; /* Three rows for three words */
+        text-align: center;
+    }
+
+    .homepage-three-title span {
+        display: block; /* Each word on a new line */
+    }
+
+    /* Adjust font size for better readability */
+    .word1 { font-size: 28px; } /* First word */
+    .word2 { font-size: 24px; } /* Second word */
+    .word3 { font-size: 22px; } /* Third word */
+}
+
+
+    </style>
+
+</head>
+<body>
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <div class="loader">
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__ball"></div>
+		</div>
+    </div><!-- end loader -->
+    <!-- END LOADER -->
+    
+	<div class="top-bar">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<div class="left-top">
+						<div class="email-box">
+							<a href="mailto:admin@shoratinnovations.com?subject=Inquiry"><i class="fa fa-envelope-o" aria-hidden="true"></i>admin@shoratinnovations.com </a>
+						</div>
+						<div class="phone-box">
+							<a href="tel:1234567890"><i class="fa fa-phone" aria-hidden="true"></i> +91 89 5656 9681</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6">
+					<div class="right-top">
+						<div class="social-media1" style="float: right;">
+                            <a href="https://www.instagram.com/shoratinnovations?igsh=bDlsMWtqOWJiN2Fw&utm_source=qr" target="_blank" class="fa fa-instagram" style="background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); -webkit-background-clip:text;
+                            -webkit-text-fill-color: transparent;"></a>
+                             <a href="https://www.linkedin.com/company/shorat-innovations/>" target="_blank" class="fa fa-linkedin"></a>
+                            <a href="https://www.youtube.com/@Programming_with_akshay_sir" target="_blank" class="fa fa-youtube" style="color: red;"></a>
+                           
+                            <a href="https://www.facebook.com/share/vESBnTsrXPKB7SqC/?mibextid=LQQJ4d" target="_blank" class="fa fa-facebook-f"></a>
+                            
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <header class="header header_style_01">
+        <nav class="megamenu navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="images/logos/shorat.png" alt="image"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="active" href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="internship.html">Internship</a></li>
+                        <li><a href="team.html">Team</a></li>
+						<li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+	
+	<div class="slider-area">
+		<div class="slider-wrapper owl-carousel">
+			<div class="slider-item text-center home-one-slider-otem slider-item-four slider-bg-two">
+				<div class="container">
+					<div class="row">
+						<div class="slider-content-area">
+							<div class="slide-text">
+								<h1 class="homepage-three-title">Outstanding <span>Corporate</span> Training</h1>
+								<h2>Transforming Ideas Into Technology</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slider-item text-center home-one-slider-otem slider-item-four slider-bg-two">
+				<div class="container">
+					<div class="row">
+						<div class="slider-content-area">
+							<div class="slide-text">
+								<h1 class="homepage-three-title" style="text-align: center;">Outstanding <span>Software</span>  Development </h1>
+								<h2>Transforming Ideas Into Technology</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<d class="slider-item text-center home-one-slider-otem slider-item-four slider-bg-two">
+				<div class="container">
+					<div class="row">
+						<div class="slider-content-area">
+							<div class="slide-text">
+								<h1 class="homepage-three-title">Outstanding <span>Internship</span> Opportunities</h1>
+								<h2>Transforming Ideas Into Technology</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <div id="about" class="section wb">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="message-box">
+                        <h4>About Us</h4>
+                        <h2>Welcome to Shorat Innovations</h2>
+                        <p class="lead">Welcome to Shorat Innovations Pvt Ltd, where technology meets innovation. Established in 2024, we are a forward-thinking technology company committed to delivering top-notch software development solutions tailored to meet the unique needs of businesses across various industries. At Shorat Innovations, our mission is to empower businesses through cutting-edge technology and innovative solutions. We specialize in creating custom software applications, mobile apps, and web solutions that drive efficiency and growth.</p>
+
+                        
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+
+                <div class="col-md-6">
+                    <div class="post-media wow fadeIn">
+                        <img src="about_01.jpg" alt="" class="img-responsive img-rounded">
+                        
+                    </div><!-- end media -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+
+            <hr class="hr1"> 
+
+            <div class="row">
+				<div class="col-md-6">
+                    <div class="post-media wow fadeIn">
+                        <img src="about_02.jpg" alt="" class="img-responsive img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+				
+                <div class="col-md-6">
+                    <div class="message-box">
+                        <h4>Who We are</h4>
+                        <h2>We Are Shorat Innovations</h2>
+                        <p class="lead">Shorat Innovations Pvt Ltd is a dynamic team of technology enthusiasts and industry experts driven by a shared vision of transforming the way businesses leverage technology. Our team consists of skilled professionals with diverse expertise in software development, mobile app creation, and digital marketing. We are more than just a service provider; we are your partners in growth. Our team is dedicated to understanding your unique challenges and working collaboratively to develop solutions that align with your goals.</p>
+
+                        
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+	
+	<div class="parallax section parallax-off" data-stellar-background-ratio="0.9" style="background-image:url('parallax_04.jpg');">
+        <div class="container">
+            <div class="row text-center stat-wrap">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <span data-scroll class="global-radius icon_wrap effect-1"><i class="flaticon-briefcase"></i></span>
+                    <p class="stat_count">50</p>
+                    <h3>Completed Projects</h3>
+                </div><!-- end col -->
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <span data-scroll class="global-radius icon_wrap effect-1"><i class="flaticon-happy"></i></span>
+                    <p class="stat_count">100</p>
+                    <h3>Happy Clients</h3>
+                </div><!-- end col -->
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <span data-scroll class="global-radius icon_wrap effect-1"><i class="flaticon-idea"></i></span>
+                    <p class="stat_count">281</p>
+                    <h3>Customer Services</h3>
+                </div><!-- end col -->
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <span data-scroll class="global-radius icon_wrap effect-1"><i class="flaticon-customer-service"></i></span>
+                    <p class="stat_count">430</p>
+                    <h3>Answered Questions</h3>
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->t
+
+            <div id="about" class="section wb">
+                <div class="container">
+                    <div class="section-title text-center">
+                        <h3 style="color: black;">Our Services</h3>
+                        <p class="lead" style="color: black;">Our Service unlimited solutions to all your business needs.In the installation package we prepare search engine optimization, social media support, we provide corporate identity and graphic design services.</p>
+                    </div>
+                   <div class="row text-center" style="width: 100%;">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="about-item">
+                                <div class="about-icon">
+                                    <span class="icon icon-embed2"></span>
+                                </div>
+                                <div class="about-text">
+                                    <h3> <a href="#">Web Development </a></h3>
+                                    <p>Custom web development that creates stunning, functional websites tailored to your business. Elevate your online presence!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="about-item">
+                                <div class="about-icon">
+                                    <span class="icon icon-mobile2"></span>
+                                </div>
+                                <div class="about-text">
+                                    <h3> <a href="#">Mobile Application</a></h3>
+                                    <p>We develop custom, user-friendly mobile apps that engage your audience and drive business growth. Let's bring your app idea to life!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="about-item">
+                                <div class="about-icon">
+                                    <span class="icon icon-profile"></span>
+                                </div>
+                                <div class="about-text">
+                                    <h3> <a href="#">Billing System</a></h3>
+                                    <p>Streamline invoicing with our intuitive billing systems. Simplify payments and manage finances effortlessly!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="about-item">
+                                <div class="about-icon">
+                                    <span class="icon icon-display"></span>
+                                </div>
+                                <div class="about-text">
+                                    <h3> <a href="#">Software Development</a></h3>
+                                    <p>Custom software development that meets your unique needs and drives efficiency. Turn your ideas into powerful solutions!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="about-item">
+                                <div class="about-icon">
+                                    <span class="icon icon-database""></span>
+                                </div>
+                                <div class="about-text">
+                                    <h3> <a href="#">Graphic Designing</a></h3>
+                                    <p>Transform your brand with our creative graphic design services. Stunning visuals that captivate and communicate your message effectively!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="about-item">
+                                <div class="about-icon">
+                                    <span class="icon icon-magic-wand"></span>
+                                </div>
+                                <div class="about-text">
+                                    <h3> <a href="#">Digital Media Marketing</a></h3>
+                                    <p>Amplify your brand with our digital media marketing. Targeted strategies to drive results and grow your online presence!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- end container -->
+        
+	
+                <div id="test-box" class="section wb">
+                    <div class="container" style="width: 100%;">
+                        <div class="section-title text-center1" style="padding-top: 20px;">
+                            <h3 style="text-align: center;">Team</h3>
+                            <p class="lead" style="color: black; text-align: center;">Our team consists of passionate and innovative professionals dedicated to delivering, <br> exceptional results in every project we undertake.</p>
+                        </b<><!-- end title -->
+                        </div>
+                        </div>
+                        </div>
+
+                <div class="container-wrapper1" style="background-image: url(parallax_04.jpg); background-position: -5px -18.8562px;">
+                    <!-- Founder Section -->
+                    <div class="container1">
+                        <div class="image-container">
+                            <img src="akshay.jpg" alt="Founder Image">
+                        </div>
+                        <div class="info-container">
+                            <h1>Akshay Rathod</h1>
+                            <p>Founder & CEO</p>
+                            <p class="bio">Akshay Rathod is the Founder and CEO of Shorat Innovations Pvt Ltd, a company dedicated to delivering cutting-edge software solutions and providing top-notch training in various programming disciplines. With a strong background in full stack development, Akshay has over 4 years of experience in the field and has trained thousands of students across multiple programming languages.</p>
+                            <div class="social-media1">
+                                <a href="https://www.instagram.com/ceo.akshaysir?igsh=MW1kY2sycGd0OTJheA%3D%3D&utm_source=qr" target="_blank" class="fab fa-instagram" style="background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); -webkit-background-clip:text;
+                                -webkit-text-fill-color: transparent;"></a>
+                                 <a href="https://www.linkedin.com/in/akshay-sir?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="fab fa-linkedin"></a>
+                                <a href="https://www.youtube.com/@Programming_with_akshay_sir" target="_blank" class="fab fa-youtube" style="color: red;"></a>
+                               
+                                <a href="https://www.facebook.com/share/SWQUuCLQzin5fhgm/?mibextid=LQQJ4d" target="_blank" class="fab fa-facebook-f"></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Team Section -->
+                    <div class="team-section">
+                        <div class="team-member">
+                            <img src="gaurav.jpg" alt="Team Member">
+                            <h3>Gaurav Borade</h3>
+                            <p>Branch Manager</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="sanyukta.png" alt="Team Member">
+                            <h3>Sanyukta Gund</h3>
+                            <p>Full Stack Developer</p>
+                        </div>
+                       
+                        <div class="team-member">
+                            <img src="vaishali.png" alt="Team Member">
+                            <h3>Vaishali Bhor</h3>
+                            <p>Frontend Developer</p>
+                        </div>
+                        
+                       
+                        <div class="team-member">
+                            <img src="vishal.jpg" alt="Team Member">
+                            <h3>Vishal Late</h3>
+                            <p>Full Stack Developer</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="vaishnavi.jpg" alt="Team Member">
+                            <h3>Vaishnavi Suryavanshi</h3>
+                            <p>Web Developer</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="rutuja.jpg" alt="Team Member">
+                            <h3>Rutuja Pawar</h3>
+                            <p>Web Developer</p>
+                        </div>
+                    </div>
+                </div>
+    
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <!-- First Column -->
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="widget clearfix">
+                            <div class="widget-title">
+                                <img src="images/logos/shorat.png" alt="Company Logo" />
+                            </div>
+                            <h2>Head office </h2>
+                            <p style="color: black;">Office no 104, Rainbow Crossroads , Bakori Phata , Wagholi , pune.
+                            <p style="color: black;">Phone : <br>
+                                8956569681  /
+                            9130067841 </p>
+                            <h2>Branch 2</h2>
+                            <p style="color: black;">Bhutkarwadi chowk,near hanuman mandir,Balikashram road , Ahilyanagar
+                            <p style="color: black;">Phone : <br>
+                                8956007459</p>
+                            <div class="social-media1">
+                                <a href="https://www.instagram.com/ceo.akshaysir?igsh=MW1kY2sycGd0OTJheA%3D%3D&utm_source=qr" target="_blank" class="fa fa-instagram" style="background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); -webkit-background-clip:text;
+                            -webkit-text-fill-color: transparent;"></a>
+                             <a href="https://www.linkedin.com/company/shorat-innovations/>" target="_blank" class="fa fa-linkedin"></a>
+                            <a href="https://www.youtube.com/@Programming_with_akshay_sir" target="_blank" class="fa fa-youtube" style="color: red;"></a>
+                           
+                            <a href="https://www.facebook.com/share/vESBnTsrXPKB7SqC/?mibextid=LQQJ4d" target="_blank" class="fa fa-facebook-f"></a>
+                                
+                            </div>
+                        </div><!-- end clearfix -->
+                    </div><!-- end col -->
+                <!-- Second Column -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Pages</h3>
+                        </div>
+                        <ul class="footer-links hov">
+                            <li><a href="index.html">Home <span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="about-us.html">About Us <span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="services.html">Our Services <span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="courses.html">Courses <span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="internship.html">Internship <span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="team.html">Team <span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="contact.html">Contact <span class="icon icon-arrow-right2"></span></a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+    
+                <!-- Third Column -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Services</h3>
+                        </div>
+                        <ul class="footer-links hov">
+                            <li><a href="services.html">Mobile App<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="services.html">Software Developmet<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="services.html">Web Development<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="services.html">Graphic Design<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="services.html">Digital Media Marketing<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="services.html">Billing Software<span class="icon icon-arrow-right2"></span></a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Courses</h3>
+                        </div>
+                        <ul class="footer-links hov">
+                            <li><a href="courses.html">Full Stack Development<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="courses.html">Web Development<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="courses.html">Data Analyst<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="courses.html">Android Development<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="courses.html">Data Science<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="courses.html">Flutter Development<span class="icon icon-arrow-right2"></span></a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+    
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </footer><!-- end footer -->
+
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-left">                   
+                    <p class="footer-company-name">All Rights Reserved. &copy; 2024 <a href="#">Shorat Innovations Pvt Ltd</a> </p>
+                </div>
+
+                
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            transition: opacity 0.5s ease; /* Smooth fade-in transition */
+        }
+
+        .modal.show {
+            display: block;
+            opacity: 1; /* Trigger the fade-in effect */
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+            transform: translateY(-200px); /* Start above the view */
+            opacity: 0;
+            position: relative;
+            z-index: 1010;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+            
+        }
+
+        .modal-content.show {
+            transform: translateY(0); /* Slide down into view */
+            opacity: 1; /* Make content visible */
+        }
+
+        .close-button {
+    color: #aaa;
+    background-color: #fefefe;
+    border: 1px solid #888;
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer !important;
+    text-align: center;
+    line-height: 30px;
+    position: absolute; /* Position relative to .modal-content */
+    top: 10px; /* Distance from the top of .modal-content */
+    right: 10px; /* Distance from the right of .modal-content */
+    z-index: 11;
+}
+
+.close-button:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            color: black;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            background-color: #f0000b;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #ff6870;
+        }
+    </style>
+
+<div id="contactFormModal" class="modal">
+    <div class="modal-content" id="modalContent">
+        <span class="close-button" id="closeButton">&times;</span>
+        <h2>Contact Us</h2>
+            <form id="contactform" class="row" action="contact.php" name="contactform" method="post">
+                <fieldset class="row-fluid">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <input type="text" name="first_name" id="first_name" class="form-control" placeholder="First Name" required>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last Name" required>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Your Email",required>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <input type="text" name="phone" id="phone" class="form-control" placeholder="Your Phone" required>
+                    </div>
+                    
+                    
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <textarea class="form-control" name="comments" id="comments" rows="6" placeholder="Give us more details.."></textarea>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
+                        <button type="submit" value="SEND" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block" style="width: 160px;">Send Message</button>
+                    </div>
+                </fieldset>
+            </form>
+            <div id="popup" style="display:none;">
+                <p>Thank you for your submission!</p>
+                <button onclick="closePopup()">Close</button>
+            </div>
+        </div>
+    </div><!-- end col -->
+
+
+
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    var modal = document.getElementById("contactFormModal");
+    var modalContent = document.getElementById("modalContent");
+    var closeButton = document.getElementById("closeButton");
+
+    // Show the modal after 3 seconds
+    setTimeout(function() {
+        modal.classList.add("show");
+
+        // Show the content with a slide-in animation
+        setTimeout(function() {
+            modalContent.classList.add("show");
+        }, 500); // Wait for the fade-in to complete before sliding in the content
+    }, 1000); // Delay of 3 seconds before showing the modal
+
+    // When the user clicks on the close button, close the modal
+    closeButton.onclick = function() {
+        modalContent.classList.remove("show");
+        modal.classList.remove("show");
+
+        // Wait for the animation to complete before hiding the modal
+        setTimeout(function() {
+            modal.style.display = "none";
+        }, 500); // Adjust this timing to match the transition duration
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modalContent.classList.remove("show");
+            modal.classList.remove("show");
+
+            setTimeout(function() {
+                modal.style.display = "none";
+            }, 500); // Adjust this timing to match the transition duration
+        }
+    }
+    
+});
+
+document.getElementById("contactform").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission
+    console.log("Form submitted!"); // Debugging log
+
+    var formData = new FormData(this);
+
+    fetch("contact.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log("Server response:", data); // Debugging
+        alert("Form submitted successfully!");
+    })
+    .catch(error => console.error("Error:", error));
+});
+
+
+
+</script>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/hoverdir.js"></script>    
+
+</body>
+</html>

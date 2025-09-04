@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+     <!-- Site Metas -->
+    <title>Shorat</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favcon1 (1) (1).ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <div class="loader">
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__ball"></div>
+		</div>
+    </div><!-- end loader -->
+    <!-- END LOADER -->
+    
+	<div class="top-bar">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<div class="left-top">
+						<div class="email-box">
+							<a href="mailto:admin@shoratinnovations.com?subject=Inquiry"><i class="fa fa-envelope-o" aria-hidden="true"></i>admin@shoratinnovations.com </a>
+						</div>
+						<div class="phone-box">
+							<a href="tel:1234567890"><i class="fa fa-phone" aria-hidden="true"></i> +91 89 5656 9681</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6">
+					<div class="right-top">
+						<div class="social-media1" style="float: right;">
+                            <a href="https://www.instagram.com/shoratinnovations?igsh=bDlsMWtqOWJiN2Fw&utm_source=qr" target="_blank" class="fab fa-instagram" style="background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); -webkit-background-clip:text;
+                            -webkit-text-fill-color: transparent;"></a>
+                             <a href="https://www.linkedin.com/company/shorat-innovations/>" target="_blank" class="fab fa-linkedin"></a>
+                            <a href="https://www.youtube.com/@Programming_with_akshay_sir" target="_blank" class="fab fa-youtube" style="color: red;"></a>
+                           
+                            <a href="https://www.facebook.com/share/vESBnTsrXPKB7SqC/?mibextid=LQQJ4d" target="_blank" class="fab fa-facebook-f"></a>
+                            
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <header class="header header_style_01">
+        <nav class="megamenu navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="images/logos/shorat.png" alt="image"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a class="active" href="courses.html">Courses</a></li>
+                        <li><a href="internship.html">Internship</a></li>
+                        <li><a href="courses.html">Team</a></li>
+						<li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    
+    
+   
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #515555;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header1 {
+            background-color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .header1 h1 {
+            color: black;
+            margin: 0;
+            font-size: 40px;
+        }
+
+        .header1 p {
+            color: black;
+            margin: 10px 0 0 0;
+            font-size: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .training-content {
+            width: 65%;
+        }
+
+        h2 {
+            color: white;
+        }
+
+        .accordion {
+            margin-top: 20px;
+        }
+
+        .accordion-button {
+            font-weight: bold;
+            background-color: #e65454;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .accordion-button .icon {
+            transition: transform 0.4s;
+        }
+
+        .active .icon {
+            transform: rotate(90deg);
+        }
+
+        .active, .accordion-button:hover {
+            background-color: #f33636;
+        }
+
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .accordion-button.active + .panel {
+            max-height: 500px; /* Adjust based on your content */
+        }
+
+        .sidebar {
+            width: 30%;
+            padding: 10px;
+        }
+
+         .benefits-box {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+         .contact-box{
+            margin: 10px;
+         }
+        
+
+        .contact-box h3, .benefits-box h3 {
+            margin-top: 0;
+        }
+
+        .contact-box p, .benefits-box ul {
+            margin: 10px 0;
+        }
+
+        .benefits-box ul {
+            padding-left: 20px;
+        }
+
+        .benefits-box li {
+            margin-bottom: 10px;
+        }
+
+        .training-details {
+            font-family: Arial, sans-serif;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .training-details h3 {
+            margin-top: 0;
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+            }
+
+            .training-content, .sidebar {
+                width: 100%;
+                flex: none;
+                padding: 0;
+                margin-bottom: 20px;
+            }
+
+            .header1 h1 {
+                font-size: 32px;
+            }
+
+            .header1 p {
+                font-size: 16px;
+            }
+
+            .accordion-button {
+                font-size: 16px;
+                padding: 10px;
+            }
+
+            .panel {
+                padding: 0 10px;
+            }
+
+            .contact-box, .benefits-box {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header1 h1 {
+                font-size: 28px;
+            }
+
+            .header1 p {
+                font-size: 14px;
+            }
+
+            .accordion-button {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            .panel {
+                padding: 0 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header1">
+        <h1>AWS Training</h1>
+        <p>
+            Master the art of cloud computing with our comprehensive AWS Training program at Shorat Innovations Pvt Ltd. This course is designed to provide you with in-depth knowledge and practical skills in Amazon Web Services (AWS), empowering you to excel in the rapidly growing cloud industry.
+        </p>
+    </div>
+    
+    <div class="container">
+        <div class="training-content">
+            <h2>Training Content</h2>
+            <div class="accordion">
+                <button class="accordion-button" id="c-button">Introduction to AWS
+                    <span class="icon">▶</span>
+                </button>
+                <div class="panel" id="c-panel">
+                    <ul>
+                        <li>What is AWS?</li>
+                        <li>Overview of Cloud Computing</li>
+                        <li>AWS Global Infrastructure</li>
+                        <li>AWS Services Overview</li>
+                        <li>Setting up an AWS Account</li>
+                    </ul>
+                </div>
+    
+                <button class="accordion-button">Compute Services
+                    <span class="icon">▶</span>
+                </button>
+    
+                <div class="panel">
+                    <ul>
+                        <li>Amazon EC2 (Elastic Compute Cloud)</li>
+                        <li>Amazon Lightsail</li>
+                        <li>AWS Lambda</li>
+                        <li>AWS Elastic Beanstalk</li>
+                    </ul>
+                </div>
+    
+                <button class="accordion-button" id="cpp-button">Storage Services
+                    <span class="icon">▶</span>
+                </button>
+                <div class="panel" id="cpp-panel">
+                    <ul>
+                        <li>Amazon S3 (Simple Storage Service)</li>
+                        <li>Amazon EBS (Elastic Block Store)</li>
+                        <li>Amazon Glacier</li>
+                        <li>AWS Storage Gateway</li>
+                    </ul>
+                </div>
+                
+                <button class="accordion-button" id="cpp-button">Networking & Content Delivery
+                    <span class="icon">▶</span>
+                </button>
+                <div class="panel" id="cpp-panel">
+                    <ul>
+                        <li>Amazon VPC (Virtual Private Cloud)</li>
+                        <li>AWS Direct Connect</li>
+                        <li>AWS CloudFront</li>
+                        <li>Route 53</li>
+                    </ul>
+                </div>
+    
+                <button class="accordion-button" id="cpp-button">Databases
+                    <span class="icon">▶</span>
+                </button>
+                <div class="panel" id="cpp-panel">
+                    <ul>
+                        <li>Amazon RDS (Relational Database Service)</li>
+                        <li>Amazon DynamoDB</li>
+                        <li>Amazon Redshift</li>
+                        <li>Amazon Aurora</li>
+                    </ul>
+                </div>
+    
+                <button class="accordion-button" id="cpp-button">Security, Identity, and Compliance
+                    <span class="icon">▶</span>
+                </button>
+                <div class="panel" id="cpp-panel">
+                    <ul>
+                        <li>AWS IAM (Identity and Access Management)</li>
+                        <li>Amazon Cognito</li>
+                        <li>AWS Shield</li>
+                        <li>AWS WAF (Web Application Firewall)</li>
+                    </ul>
+                </div>
+    
+                <button class="accordion-button" id="cpp-button">Monitoring and Management
+                    <span class="icon">▶</span>
+                </button>
+                <div class="panel" id="cpp-panel">
+                    <ul>
+                        <li>AWS CloudWatch</li>
+                        <li>AWS CloudTrail</li>
+                        <li>AWS Config</li>
+                        <li>AWS Trusted Advisor</li>
+                    </ul>
+                </div>
+    
+                <button class="accordion-button" id="cpp-button">Automation and DevOps
+                    <span class="icon">▶</span>
+                </button>
+                <div class="panel" id="cpp-panel">
+                    <ul>
+                        <li>AWS CloudFormation</li>
+                        <li>AWS CodeDeploy</li>
+                        <li>AWS CodePipeline</li>
+                        <li>AWS OpsWorks</li>
+                    </ul>
+                </div>
+    
+                <button class="accordion-button" id="cpp-button">Cost and Billing
+                    <span class="icon">▶</span>
+                </button>
+                <div class="panel" id="cpp-panel">
+                    <ul>
+                        <li>AWS Pricing Overview</li>
+                        <li>AWS Cost Explorer</li>
+                        <li>AWS Budgets</li>
+                        <li>AWS Cost and Usage Reports</li>
+                    </ul>
+                </div>
+    
+                <button class="accordion-button" id="cpp-button">Architecting on AWS
+                    <span class="icon">▶</span>
+                </button>
+                <div class="panel" id="cpp-panel">
+                    <ul>
+                        <li>Well-Architected Framework</li>
+                        <li>High Availability and Disaster Recovery</li>
+                        <li>Scalability and Performance</li>
+                        <li>Cost Optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="sidebar">
+            <div class="contact-box">
+                <button id="lightning-button" class="lightning-btn" onclick="window.location.href='contact.html';">Enroll Now</button>
+            </div>
+            <div class="benefits-box">
+                <h3>Benefits of the Training</h3>
+                <ul>
+                    <li>100% placement assistance</li>
+                    <li>Experienced Trainers</li>
+                    <li>ISO Certificate</li>
+                    <li>Mock Interviews</li>
+                    <li>Weekly Test</li>
+                    <li>Individual Trainers</li>
+                    <li>Resume Building</li>
+                    <li>Interview Preparation</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="training-details">
+        <h3>Training Details</h3>
+        <p>At the end of the AWS Training Program, you will be proficient in utilizing Amazon Web Services (AWS) to design, deploy, and manage scalable and secure cloud applications. You will gain hands-on experience in working with various AWS services such as EC2, S3, Lambda, and RDS, and understand how to architect cloud solutions to meet business needs. This comprehensive training will empower you to pass the AWS certification exams and set you up for a successful career in cloud computing, ensuring you are equipped with the skills to manage cloud infrastructure in a cost-effective and efficient manner.</p>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion-button");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                // Toggle the active class for the button
+                this.classList.toggle("active");
+
+                // Toggle the associated panel
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+
+   
+    
+
+    
+            
+
+       
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- First Column -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <img src="images/logos/shorat.png" alt="Company Logo" />
+                        </div>
+                        <h2>Head office </h2>
+                            <p style="color: black;">Office no 104, Rainbow Crossroads , Bakori Phata , Wagholi , pune.
+                            <p style="color: black;">Phone : <br>
+                                8956569681  /
+                            9130067841 </p>
+                            <h2>Branch 2</h2>
+                            <p style="color: black;">Bhutkarwadi chowk,near hanuman mandir,Balikashram road , Ahilyanagar
+                            <p style="color: black;">Phone : <br>
+                                8956007459</p>
+                        <div class="social-media1">
+                            <a href="https://www.instagram.com/shoratinnovations?igsh=bDlsMWtqOWJiN2Fw&utm_source=qr" target="_blank" class="fa fa-instagram" style="background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); -webkit-background-clip:text;
+                        -webkit-text-fill-color: transparent;"></a>
+                         <a href="https://www.linkedin.com/company/shorat-innovations/>" target="_blank" class="fa fa-linkedin"></a>
+                        <a href="https://www.youtube.com/@Programming_with_akshay_sir" target="_blank" class="fa fa-youtube" style="color: red;"></a>
+                       
+                        <a href="https://www.facebook.com/share/vESBnTsrXPKB7SqC/?mibextid=LQQJ4d" target="_blank" class="fa fa-facebook-f"></a>
+                            
+                        </div>
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+                
+    
+                <!-- Second Column -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Pages</h3>
+                        </div>
+                        <ul class="footer-links hov">
+                            <li><a href="index.html">Home <span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="about-us.html">About Us <span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="services.html">Our Services <span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="courses.html">Courses <span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="internship.html">Internship <span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="team.html">Team <span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="contact.html">Contact <span class="icon icon-arrow-right2"></span></a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+    
+                <!-- Third Column -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Services</h3>
+                        </div>
+                        <ul class="footer-links hov">
+                            <li><a href="#">Mobile App<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="#">Software Developmet<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="#">Web Development<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="#">Graphic Design<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="#">Digital Media Marketing<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="#">Billing Software<span class="icon icon-arrow-right2"></span></a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Courses</h3>
+                        </div>
+                        <ul class="footer-links hov">
+                            <li><a href="#">Full Stack Development<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="#">Web Development<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="#">Data Analyst<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="#">Android Development<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="#">Data Science<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="#">Flutter Development<span class="icon icon-arrow-right2"></span></a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+    
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </footer><!-- end footer -->
+
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-left">                   
+                    <p class="footer-company-name">All Rights Reserved. &copy; 2024 <a href="#">Shorat Innovations Pvt Ltd</a> </p>
+                </div>
+
+                
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/hoverdir.js"></script>    
+
+</body>
+</html>

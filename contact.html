@@ -113,6 +113,160 @@
     .social-icons a:hover {
       color: #333;
     }
+
+    .contact_form button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .address-item {
+        text-align: center;
+        padding: 15px;
+        width: 100%;
+    }
+
+    .address-item h3 {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .address-item p {
+        font-size: 14px;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pd-add {
+        width: 100% !important;
+        padding: 0 10px;
+    }
+
+    .col-md-offset-1.col-sm-10.col-md-10.col-sm-offset-1 {
+        width: 100%;
+    }
+    #popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    z-index: 9999;
+}
+#popup p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+#popup button {
+    background: #f0000b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#popup button:hover {
+    background: #c0392b;
+}
+e
+
+    .address-icon {
+        font-size: 24px;
+    }
+
+    #popup {
+        width: 90%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #popup button {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-md-8.col-md-offset-2 {
+        width: 90% !important;  /* Adjust width */
+        margin: 0 auto !important; /* Center form */
+        padding: 10px;
+    }
+
+    .contact_form {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 15px;
+        margin: 0 auto; /* Ensures centering */
+    }
+
+    .contact_form input,
+    .contact_form textarea {
+        width: 100% !important;
+        font-size: 14px;
+        padding: 12px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .contact_form button {
+        width: 100% !important;
+        padding: 12px;
+        font-size: 16px;
+        background: #f0000b;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .contact_form button:hover {
+        background: #f0000b;
+    }
+
+    #popup {
+        width: 90%;
+        padding: 20px;
+        text-align: center;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #popup button {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        background: #e74c3c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #popup button:hover {
+        background: #c0392b;
+    }
+}
+
     </style>
 </head>
 
@@ -138,8 +292,7 @@
                         <div class="social-media1" style="float: right;">
                             <a href="https://www.instagram.com/shoratinnovations" target="_blank" 
                                class="fa fa-instagram" 
-                               style="background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
-                               -webkit-background-clip:text; -webkit-text-fill-color: transparent;"></a>
+                               style="background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); -webkit-background-clip:text; -webkit-text-fill-color: transparent;"></a>
                             <a href="https://www.linkedin.com/company/shorat-innovations" target="_blank" class="fa fa-linkedin"></a>
                             <a href="https://www.youtube.com/@Programming_with_akshay_sir" target="_blank" class="fa fa-youtube" style="color:red;"></a>
                             <a href="https://www.facebook.com/share/vESBnTsrXPKB7SqC/" target="_blank" class="fa fa-facebook-f"></a>
@@ -163,8 +316,16 @@
                         <li><a href="services.html">Our Services</a></li>
                         <li><a href="courses.html">Courses</a></li>
                         <li><a href="internship.html">Internship</a></li>
+<<<<<<< HEAD
                         <li><a class="active" href="career.html">Career</a></li>
                         <li><a href="contact.html">Contact</a></li>
+=======
+
+
+                        <li><a href="team.html">Team</a></li>
+                        <li><a class="active" href="contact.html">Contact</a></li>
+
+>>>>>>> ae7bb122b9d2035845b0603b27c6d01d40540fdd
                     </ul>
                 </div>
             </div>

@@ -270,6 +270,43 @@ e
     </style>
 </head>
 
+<<<<<<< HEAD
+    <!-- LOADER -->
+    <div id="preloader">
+        <div class="loader">
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__ball"></div>
+		</div>
+    </div><!-- end loader -->
+    <!-- END LOADER -->
+    
+	<div class="top-bar">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<div class="left-top">
+						<div class="email-box">
+							<a href="mailto:admin@shoratinnovations.com?subject=Inquiry"><i class="fa fa-envelope-o" aria-hidden="true"></i>admin@shoratinnovations.com </a>
+						</div>
+						<div class="phone-box">
+							<a href="tel:1234567890"><i class="fa fa-phone" aria-hidden="true"></i> +91 89 5656 9681</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6">
+					<div class="right-top">
+						<div class="social-media1" style="float: right;">
+                            <a href="https://www.instagram.com/shoratinnovations?igsh=bDlsMWtqOWJiN2Fw&utm_source=qr" target="_blank" class="fab fa-instagram" style="background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); -webkit-background-clip:text;
+                            -webkit-text-fill-color: transparent;"></a>
+                             <a href="https://www.linkedin.com/company/shorat-innovations" target="_blank" class="fab fa-linkedin"></a>
+                             <a href="https://www.facebook.com/share/vESBnTsrXPKB7SqC/?mibextid=LQQJ4d" target="_blank" class="fab fa-facebook-f"></a>
+                             <a href="https://www.youtube.com/@shoratinnovations"  target="_blank" class="fab fa-youtube-play" style="color: red;"></a>
+                            
+=======
 <body>
     <!-- ✅ HEADER from your original code -->
     <div class="top-bar">
@@ -281,6 +318,7 @@ e
                             <a href="mailto:admin@shoratinnovations.com?subject=Inquiry">
                                 <i class="fa fa-envelope-o" aria-hidden="true"></i>admin@shoratinnovations.com 
                             </a>
+>>>>>>> 218ba3bb6f85fdb290696162da8ac1a250867d6e
                         </div>
                         <div class="phone-box">
                             <a href="tel:8956569681"><i class="fa fa-phone" aria-hidden="true"></i> +91 89 5656 9681</a>
@@ -317,6 +355,10 @@ e
                         <li><a href="courses.html">Courses</a></li>
                         <li><a href="internship.html">Internship</a></li>
 <<<<<<< HEAD
+                        <li><a href="team.html">Team</a></li>
+                        <li><a class="active" href="contact.html">Contact</a></li>
+=======
+<<<<<<< HEAD
                         <li><a class="active" href="career.html">Career</a></li>
                         <li><a href="contact.html">Contact</a></li>
 =======
@@ -326,6 +368,7 @@ e
                         <li><a class="active" href="contact.html">Contact</a></li>
 
 >>>>>>> ae7bb122b9d2035845b0603b27c6d01d40540fdd
+>>>>>>> 218ba3bb6f85fdb290696162da8ac1a250867d6e
                     </ul>
                 </div>
             </div>
@@ -369,7 +412,7 @@ e
     <!-- Forms -->
     <div id="headOfficeForm" class="branch-form">
       <h3 style="color:white;">Head Office Contact Form</h3>
-      <form>
+      <form action="contact.php" method="POST">
         <input type="text" placeholder="First Name" required>
         <input type="text" placeholder="Last Name" required>
         <input type="email" placeholder="Your Email" required>
@@ -381,7 +424,7 @@ e
 
     <div id="branch2Form" class="branch-form">
       <h3 style="color:white;">Branch 2 Contact Form</h3>
-      <form>
+      <form action="contact.php" method="POST">
         <input type="text" placeholder="First Name" required>
         <input type="text" placeholder="Last Name" required>
         <input type="email" placeholder="Your Email" required>
@@ -495,6 +538,51 @@ e
     <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
 
     <!-- JS -->
+<<<<<<< HEAD
+    <!-- JS -->
+<script src="js/all.js"></script>
+<script src="js/custom.js"></script>
+<script>
+  function showForm(formId) {
+    document.querySelectorAll(".branch-form").forEach(div => div.style.display = "none");
+    document.getElementById(formId).style.display = "block";
+    window.scrollTo({ top: document.getElementById(formId).offsetTop - 100, behavior: 'smooth' });
+  }
+
+  // Handle form submission for both branch forms
+  document.querySelectorAll(".branch-form form").forEach(form => {
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const formData = new FormData();
+      formData.append("first_name", form.querySelector('input[placeholder="First Name"]').value);
+      formData.append("last_name", form.querySelector('input[placeholder="Last Name"]').value);
+      formData.append("email", form.querySelector('input[placeholder="Your Email"]').value);
+      formData.append("phone", form.querySelector('input[placeholder="Your Phone"]').value);
+      formData.append("comments", form.querySelector('textarea').value);
+
+      fetch("contact.php", {
+        method: "POST",
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.status === "success") {
+          alert("✅ " + data.message);
+          form.reset();
+        } else {
+          alert("❌ " + data.message);
+        }
+      })
+      .catch(error => {
+        console.error("Error:", error);
+        alert("❌ Submission failed. Please try again.");
+      });
+    });
+  });
+</script>
+
+=======
     <script src="js/all.js"></script>
     <script src="js/custom.js"></script>
     <script>
@@ -504,5 +592,6 @@ e
         window.scrollTo({ top: document.getElementById(formId).offsetTop - 100, behavior: 'smooth' });
       }
     </script>
+>>>>>>> 218ba3bb6f85fdb290696162da8ac1a250867d6e
 </body>
 </html>

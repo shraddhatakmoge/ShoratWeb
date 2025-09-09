@@ -218,6 +218,50 @@
 
 
 
+.courses-discount-banner {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+  .courses-discount-track {
+    display: flex;
+    gap: 30px;
+    white-space: nowrap;
+    animation: scroll-left 25s linear infinite;
+  }
+
+  .discount-item {
+    display: inline-block;
+    background: linear-gradient(45deg, #8b0000, #ff0000);
+    color: #fff;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(255,0,0,0.5);
+    pointer-events: auto;
+  }
+
+  .discount-item:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+
+
 
     </style>font
 
@@ -310,9 +354,31 @@
 	
 	<div class="slider-area">
         <div class="header-notification">
+<<<<<<< HEAD
         <!-- <div class="top-ad">
   🎉 Special Offer: Get 20% off on all courses! Limited Time Only! 🎉
 </div> -->
+=======
+        <div class="top-ad">
+    🎉 Special Offer: Get 20% off on all courses! Limited Time Only! 🎉
+    </div>
+
+    <div class="courses-discount-banner">
+  <div class="courses-discount-track">
+    <div class="discount-item">💻 Web Development - 20% Off</div>
+    <div class="discount-item">📱 Android Development - 15% Off</div>
+    <div class="discount-item">🤖 AI/ML Course - 25% Off</div>
+    <div class="discount-item">🌐 Full Stack Development - 30% Off</div>
+    <div class="discount-item">🎨 UI/UX Design - 10% Off</div>
+    <!-- Repeat items to make continuous effect -->
+    <div class="discount-item">💻 Web Development - 20% Off</div>
+    <div class="discount-item">📱 Android Development - 15% Off</div>
+    <div class="discount-item">🤖 AI/ML Course - 25% Off</div>
+    <div class="discount-item">🌐 Full Stack Development - 30% Off</div>
+    <div class="discount-item">🎨 UI/UX Design - 10% Off</div>
+  </div>
+</div>
+>>>>>>> 6d8428a2442f655540cb2b01bc6e5f7457af8797
 
     </div>
 		<div class="slider-wrapper owl-carousel">

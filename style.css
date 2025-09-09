@@ -539,6 +539,7 @@ li.social-links a {
 .home-one-slider-otem .slider-content-area {
     height: 650px;
     position: relative;
+    
 }
 
 .slide-text {
@@ -591,9 +592,7 @@ li.social-links a {
 	border-radius: 25px 0px 25px 0px;
 }
 
-.slider-wrapper .owl-nav .owl-prev:hover, .slider-wrapper .owl-nav .owl-next:hover {
-	background: #f0000b;
-}
+
 
 .slider-wrapper .owl-nav .owl-prev {
     margin-left: 0%;

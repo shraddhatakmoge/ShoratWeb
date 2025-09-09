@@ -1,2 +1,88 @@
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* dark stylish gradient */
+    font-family: 'Poppins', sans-serif;
+  }
 
-/** ADD YOUR AWESOME CODES HERE **/
+  .service-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+    backdrop-filter: blur(15px);
+    padding: 35px 25px;
+    border-radius: 20px;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    cursor: pointer;
+    margin-bottom: 35px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  .service-card.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s ease;
+  }
+
+  .service-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+    animation: rotate 10s linear infinite;
+  }
+
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .service-card:hover {
+    transform: translateY(-15px) scale(1.08);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .about-icon {
+    font-size: 55px;
+    color: #00f2fe;
+    margin-bottom: 20px;
+    transition: transform 0.4s ease, color 0.3s ease, text-shadow 0.3s ease;
+  }
+
+  .service-card:hover .about-icon {
+    transform: scale(1.4) rotate(12deg);
+    color: #ff4b1f;
+    text-shadow: 0 0 25px #ff4b1f, 0 0 40px #ff9068;
+  }
+
+  .about-icon.pulse {
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+  }
+
+  .service-card h3 a {
+    font-weight: 700;
+    font-size: 22px;
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(45deg, #00f2fe, #4facfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .service-card p {
+    font-size: 15px;
+    color: #ccc;
+    line-height: 1.7;
+    margin-top: 10px;
+  }

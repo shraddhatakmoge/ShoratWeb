@@ -101,6 +101,36 @@
     .col-md-offset-1.col-sm-10.col-md-10.col-sm-offset-1 {
         width: 100%;
     }
+    #popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    z-index: 9999;
+}
+#popup p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+#popup button {
+    background: #f0000b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#popup button:hover {
+    background: #c0392b;
+}
+e
 
     .address-icon {
         font-size: 24px;
@@ -224,12 +254,11 @@
 				<div class="col-md-6 col-sm-6">
 					<div class="right-top">
 						<div class="social-media1" style="float: right;">
-                            <a href="https://www.instagram.com/shoratinnovations?igsh=bDlsMWtqOWJiN2Fw&utm_source=qr" target="_blank" class="fa fa-instagram" style="background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); -webkit-background-clip:text;
+                            <a href="https://www.instagram.com/shoratinnovations?igsh=bDlsMWtqOWJiN2Fw&utm_source=qr" target="_blank" class="fab fa-instagram" style="background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); -webkit-background-clip:text;
                             -webkit-text-fill-color: transparent;"></a>
-                             <a href="https://www.linkedin.com/company/shorat-innovations/>" target="_blank" class="fa fa-linkedin"></a>
-                            <a href="https://www.youtube.com/@Programming_with_akshay_sir" target="_blank" class="fa fa-youtube" style="color: red;"></a>
-                           
-                            <a href="https://www.facebook.com/share/vESBnTsrXPKB7SqC/?mibextid=LQQJ4d" target="_blank" class="fa fa-facebook-f"></a>
+                             <a href="https://www.linkedin.com/company/shorat-innovations" target="_blank" class="fab fa-linkedin"></a>
+                             <a href="https://www.facebook.com/share/vESBnTsrXPKB7SqC/?mibextid=LQQJ4d" target="_blank" class="fab fa-facebook-f"></a>
+                             <a href="https://www.youtube.com/@shoratinnovations"  target="_blank" class="fab fa-youtube-play" style="color: red;"></a>
                             
                         </div>
 					</div>
@@ -256,7 +285,7 @@
                         <li><a href="services.html">Our Services</a></li>
                         <li><a href="courses.html">Courses</a></li>
                         <li><a href="internship.html">Internship</a></li>
-                        <li><a href="team.html">Team</a></li>
+                        
 						<li><a class="active" href="contact.html">Contact</a></li>
                     </ul>
                 </div>
@@ -292,7 +321,7 @@
                 <div class="col-md-8 col-md-offset-2" style="margin-left: 26%;width: 50%;">
                     <div class="contact_form">
                         <div id="message"></div>
-                        <form id="contactform" class="row" action="contact.php" name="contactform" method="post">
+                        <form id="contactform" class="row" action="http://localhost:8000/contact.php" name="contactform" method="post">
                             <fieldset class="row-fluid">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <input type="text" name="first_name" id="first_name" class="form-control" placeholder="First Name" required>
@@ -301,7 +330,7 @@
                                     <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last Name" required>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <input type="email" name="email" id="email" class="form-control" placeholder="Your Email",required>
+                                    <input type="email" name="email" id="email" class="form-control" placeholder="Your Email" required>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <input type="text" name="phone" id="phone" class="form-control" placeholder="Your Phone" required>
@@ -404,7 +433,7 @@
                             <li><a href="services.html">Our Services <span class="icon icon-arrow-right2"></span></a></li>
                             <li><a href="courses.html">Courses <span class="icon icon-arrow-right2"></span></a></li>
                             <li><a href="internship.html">Internship <span class="icon icon-arrow-right2"></span></a></li>
-                            <li><a href="team.html">Team <span class="icon icon-arrow-right2"></span></a></li>
+                            
                             <li><a href="contact.html">Contact <span class="icon icon-arrow-right2"></span></a></li>
                         </ul><!-- end links -->
                     </div><!-- end clearfix -->
@@ -477,52 +506,40 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("contactform").addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent default form submission
+    const form = document.getElementById("contactform");
+    const popup = document.getElementById("popup");
 
-        let now = new Date();
-        let formattedDate = now.toLocaleString(); // Capture current date and time
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Stop normal form submission
 
-        let formData = new FormData(this);
-        formData.append("dateTime", formattedDate); // Add date-time field
+        let formData = new FormData(form);
 
-        fetch("contact.php", {
+        fetch("http://localhost:8000/contact.php", {
             method: "POST",
             body: formData
         })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Network response was not OK");
-            }
-            return response.text(); // Get raw text first
-        })
-        .then(text => {
-            console.log("Raw response:", text); // Log raw response for debugging
-
-            let data;
-            try {
-                data = JSON.parse(text); // Try to parse JSON
-            } catch (error) {
-                throw new Error("Invalid JSON response: " + text);
-            }
-
-            console.log("Parsed response:", data);
-
+        .then(response => response.json()) // Directly parse JSON
+        .then(data => {
             if (data.status === "success") {
-                alert(data.message); // Show success message
-                document.getElementById("contactform").reset(); // Reset form
+                // ✅ Show popup instead of alert
+                popup.style.display = "block";
+                form.reset();
+                alert("✅ Message sent successfully!");
             } else {
-                alert("Error: " + data.message); // Show error message
+                alert("❌ Error: " + data.message);
             }
         })
         .catch(error => {
             console.error("Fetch error:", error);
-            alert("There was an error submitting the form. Please try again.");
+            alert("⚠ There was an error submitting the form. Please try again.");
         });
     });
 });
 
-
+// ✅ Close popup function
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+}
 </script>
 
 

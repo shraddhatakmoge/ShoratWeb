@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    <head>
     <!-- Basic -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">   
@@ -120,7 +120,29 @@
         padding: 0 15px;
     }
 }
+.header-notification {
+  background: #000000; /* background color for bar */
+  color: rgb(255, 255, 255);''
+  padding: 8px 0;
+  overflow: hidden;
+  position: relative;
+}
 
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%; /* start outside screen */
+  animation: scroll-left 15s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
 /* Small Phone Styles */
 @media (max-width: 480px) {
@@ -179,6 +201,19 @@
     .word2 { font-size: 24px; } /* Second word */
     .word3 { font-size: 22px; } /* Third word */
 }
+.top-ad {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  background: #ffcc00;
+  color: #000;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+
 
 
     </style>
@@ -215,12 +250,11 @@
 				<div class="col-md-6 col-sm-6">
 					<div class="right-top">
 						<div class="social-media1" style="float: right;">
-                            <a href="https://www.instagram.com/shoratinnovations?igsh=bDlsMWtqOWJiN2Fw&utm_source=qr" target="_blank" class="fa fa-instagram" style="background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); -webkit-background-clip:text;
+                            <a href="https://www.instagram.com/shoratinnovations?igsh=bDlsMWtqOWJiN2Fw&utm_source=qr" target="_blank" class="fab fa-instagram" style="background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); -webkit-background-clip:text;
                             -webkit-text-fill-color: transparent;"></a>
-                             <a href="https://www.linkedin.com/company/shorat-innovations/>" target="_blank" class="fa fa-linkedin"></a>
-                            <a href="https://www.youtube.com/@Programming_with_akshay_sir" target="_blank" class="fa fa-youtube" style="color: red;"></a>
-                           
-                            <a href="https://www.facebook.com/share/vESBnTsrXPKB7SqC/?mibextid=LQQJ4d" target="_blank" class="fa fa-facebook-f"></a>
+                             <a href="https://www.linkedin.com/company/shorat-innovations" target="_blank" class="fab fa-linkedin"></a>
+                             <a href="https://www.facebook.com/share/vESBnTsrXPKB7SqC/?mibextid=LQQJ4d" target="_blank" class="fab fa-facebook-f"></a>
+                             <a href="https://www.youtube.com/@shoratinnovations"  target="_blank" class="fab fa-youtube-play" style="color: red;"></a>
                             
                         </div>
 					</div>
@@ -229,33 +263,43 @@
 		</div>
 	</div>
     <header class="header header_style_01">
-        <nav class="megamenu navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html"><img src="images/logos/shorat.png" alt="image"></a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a class="active" href="index.html">Home</a></li>
-                        <li><a href="about-us.html">About us</a></li>
-                        <li><a href="services.html">Our Services</a></li>
-                        <li><a href="courses.html">Courses</a></li>
-                        <li><a href="internship.html">Internship</a></li>
-                        <li><a href="team.html">Team</a></li>
-						<li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
+
+    <!-- Notification marquee -->
+    
+
+    <nav class="megamenu navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="images/logos/shorat.png" alt="image"></a>
             </div>
-        </nav>
-    </header>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="about-us.html">About us</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="internship.html">Internship</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
 	
 	<div class="slider-area">
+        <div class="header-notification">
+        <div class="top-ad">
+  🎉 Special Offer: Get 20% off on all courses! Limited Time Only! 🎉
+</div>
+
+    </div>
 		<div class="slider-wrapper owl-carousel">
 			<div class="slider-item text-center home-one-slider-otem slider-item-four slider-bg-two">
 				<div class="container">
@@ -281,7 +325,7 @@
 					</div>
 				</div>
 			</div>
-			<d class="slider-item text-center home-one-slider-otem slider-item-four slider-bg-two">
+			<div class="slider-item text-center home-one-slider-otem slider-item-four slider-bg-two">
 				<div class="container">
 					<div class="row">
 						<div class="slider-content-area">
@@ -423,7 +467,7 @@
                         <div class="col-md-3 col-sm-6">
                             <div class="about-item">
                                 <div class="about-icon">
-                                    <span class="icon icon-database""></span>
+                                    <span class="icon icon-database"></span>
                                 </div>
                                 <div class="about-text">
                                     <h3> <a href="#">Graphic Designing</a></h3>
@@ -451,7 +495,7 @@
                         <div class="section-title text-center1" style="padding-top: 20px;">
                             <h3 style="text-align: center;">Team</h3>
                             <p class="lead" style="color: black; text-align: center;">Our team consists of passionate and innovative professionals dedicated to delivering, <br> exceptional results in every project we undertake.</p>
-                        </b<><!-- end title -->
+                        <br><!-- end title -->
                         </div>
                         </div>
                         </div>
@@ -526,12 +570,12 @@
                                 <img src="images/logos/shorat.png" alt="Company Logo" />
                             </div>
                             <h2>Head office </h2>
-                            <p style="color: black;">Office no 104, Rainbow Crossroads , Bakori Phata , Wagholi , pune.
+                            <p style="color: black;">Office no 104, Rainbow Crossroads , Bakori Phata , Wagholi , pune.</p>
                             <p style="color: black;">Phone : <br>
                                 8956569681  /
                             9130067841 </p>
                             <h2>Branch 2</h2>
-                            <p style="color: black;">Bhutkarwadi chowk,near hanuman mandir,Balikashram road , Ahilyanagar
+                            <p style="color: black;">Bhutkarwadi chowk,near hanuman mandir,Balikashram road , Ahilyanagar</p>
                             <p style="color: black;">Phone : <br>
                                 8956007459</p>
                             <div class="social-media1">
@@ -557,7 +601,7 @@
                             <li><a href="services.html">Our Services <span class="icon icon-arrow-right2"></span></a></li>
                             <li><a href="courses.html">Courses <span class="icon icon-arrow-right2"></span></a></li>
                             <li><a href="internship.html">Internship <span class="icon icon-arrow-right2"></span></a></li>
-                            <li><a href="team.html">Team <span class="icon icon-arrow-right2"></span></a></li>
+                           
                             <li><a href="contact.html">Contact <span class="icon icon-arrow-right2"></span></a></li>
                         </ul><!-- end links -->
                     </div><!-- end clearfix -->
@@ -642,7 +686,7 @@
 
         .modal-content {
             background-color: #fefefe;
-            margin: 15% auto;
+            margin: 8% auto;
             padding: 20px;
             border: 1px solid #888;
             width: 80%;
@@ -731,7 +775,7 @@
                         <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last Name" required>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <input type="email" name="email" id="email" class="form-control" placeholder="Your Email",required>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Your Email" required>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <input type="text" name="phone" id="phone" class="form-control" placeholder="Your Phone" required>
@@ -752,58 +796,49 @@
             </div>
         </div>
     </div><!-- end col -->
-
-
-
-
-
-
-
-
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
     var modal = document.getElementById("contactFormModal");
     var modalContent = document.getElementById("modalContent");
     var closeButton = document.getElementById("closeButton");
 
-    // Show the modal after 3 seconds
-    setTimeout(function() {
-        modal.classList.add("show");
+    // Detect refresh reliably
+    var isReload = performance.navigation.type === performance.navigation.TYPE_RELOAD;
 
-        // Show the content with a slide-in animation
+    if (isReload) {
+        // Show popup only on refresh
         setTimeout(function() {
-            modalContent.classList.add("show");
-        }, 500); // Wait for the fade-in to complete before sliding in the content
-    }, 1000); // Delay of 3 seconds before showing the modal
+            modal.classList.add("show");
+            setTimeout(function() {
+                modalContent.classList.add("show");
+            }, 500);
+        }, 1000);
+    }
 
-    // When the user clicks on the close button, close the modal
+    // Close button
     closeButton.onclick = function() {
         modalContent.classList.remove("show");
         modal.classList.remove("show");
-
-        // Wait for the animation to complete before hiding the modal
         setTimeout(function() {
             modal.style.display = "none";
-        }, 500); // Adjust this timing to match the transition duration
+        }, 500);
     }
 
-    // When the user clicks anywhere outside of the modal, close it
+    // Close on outside click
     window.onclick = function(event) {
         if (event.target == modal) {
             modalContent.classList.remove("show");
             modal.classList.remove("show");
-
             setTimeout(function() {
                 modal.style.display = "none";
-            }, 500); // Adjust this timing to match the transition duration
+            }, 500);
         }
     }
-    
 });
 
+// Handle form submission
 document.getElementById("contactform").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent default form submission
-    console.log("Form submitted!"); // Debugging log
+    event.preventDefault();
 
     var formData = new FormData(this);
 
@@ -813,15 +848,13 @@ document.getElementById("contactform").addEventListener("submit", function(event
     })
     .then(response => response.text())
     .then(data => {
-        console.log("Server response:", data); // Debugging
         alert("Form submitted successfully!");
     })
     .catch(error => console.error("Error:", error));
 });
-
-
-
 </script>
+
+
 
     <!-- ALL JS FILES -->
     <script src="js/all.js"></script>

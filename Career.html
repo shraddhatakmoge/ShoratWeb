@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers | Institute Name</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #222;
+    }
+    header {
+      background: #000;
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #ff6600;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      margin-top: 20px;
+      background: #ff6600;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #e65c00;
+    }
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+    .section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: #ff6600;
+    }
+    .highlights {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .highlight {
+      flex: 1;
+      min-width: 250px;
+      background: #f9f9f9;
+      padding: 20px;
+      border-left: 6px solid #ff6600;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .jobs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .job-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .job-card h3 {
+      margin: 0;
+      color: #ff6600;
+    }
+    .job-card p {
+      margin: 8px 0;
+    }
+    .job-card button {
+      background: #ff6600;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .job-card button:hover {
+      background: #e65c00;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  
+
+  <!-- Hero Section -->
+  <header>
+    <h1>Kickstart Your Career with Us</h1>
+    <p>Explore internships and placement opportunities with our institute.</p>
+    <a href="#openings" class="btn">View Openings</a>
+  </header>
+
+  <!-- Highlights -->
+  <section class="section">
+    <h2>Why Choose Us?</h2>
+    <div class="highlights">
+      <div class="highlight">
+        <h3>🌟 Internships</h3>
+        <p>Work on real-world projects and gain industry exposure.</p>
+      </div>
+      <div class="highlight">
+        <h3>🎯 Placement Assistance</h3>
+        <p>Get connected with recruiters for your career growth.</p>
+      </div>
+      <div class="highlight">
+        <h3>📚 Skill Building</h3>
+        <p>Exclusive workshops & training programs to upskill you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Job Openings -->
+  <section class="section" id="openings">
+    <h2>Current Openings</h2>
+    <div class="jobs" id="job-list">
+      <!-- Jobs will be loaded by JS -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Institute Name | Placement & Internship Cell</p>
+  </footer>
+
+  <!-- JavaScript for Dynamic Jobs -->
+  <script>
+    const jobs = [
+      {
+        title: "Web Development Intern",
+        company: "TechSoft Pvt Ltd",
+        location: "Remote",
+        duration: "3 Months",
+        deadline: "15 Sept 2025"
+      },
+      {
+        title: "Java Developer Intern",
+        company: "CodeWorks",
+        location: "Pune",
+        duration: "6 Months",
+        deadline: "20 Sept 2025"
+      },
+      {
+        title: "AI/ML Internship",
+        company: "DataMind AI",
+        location: "Bangalore",
+        duration: "4 Months",
+        deadline: "10 Sept 2025"
+      }
+    ];
+
+    const jobList = document.getElementById("job-list");
+    jobs.forEach(job => {
+      const div = document.createElement("div");
+      div.classList.add("job-card");
+      div.innerHTML = `
+        <h3>${job.title}</h3>
+        <p><strong>Company:</strong> ${job.company}</p>
+        <p><strong>Location:</strong> ${job.location}</p>
+        <p><strong>Duration:</strong> ${job.duration}</p>
+        <p><strong>Deadline:</strong> ${job.deadline}</p>
+        <button>Apply Now</button>
+      `;
+      jobList.appendChild(div);
+    });
+  </script>
+
+</body>
+</html>

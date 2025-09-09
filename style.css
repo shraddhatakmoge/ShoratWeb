@@ -521,7 +521,7 @@ li.social-links a {
     background-image: url("slider_02.jpg");
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: None;
 }
 
 .slider-bg-three {
@@ -545,7 +545,7 @@ li.social-links a {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 100%;
+    width: 90%;
     z-index: 1;
 }
 
@@ -582,7 +582,7 @@ li.social-links a {
 
 
 .slider-wrapper .owl-nav .owl-prev, .slider-wrapper .owl-nav .owl-next {
-    background: #393939;
+    /* background: #393939; */
     height: 60px;
     top: 50%;
     transform: translateY(-50%);

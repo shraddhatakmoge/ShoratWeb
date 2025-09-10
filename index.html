@@ -299,9 +299,7 @@
 	
 	<div class="slider-area">
         <div class="header-notification">
-        <div class="top-ad">
-  🎉 Special Offer: Get 20% off on all courses! Limited Time Only! 🎉
-</div>
+        
 
     </div>
 		<div class="slider-wrapper owl-carousel">
@@ -514,8 +512,8 @@
                             <p class="lead" style="color: black; text-align: center;">Our team consists of passionate and innovative professionals dedicated to delivering, <br> exceptional results in every project we undertake.</p>
                         <br><!-- end title -->
                         </div>
-                        </div>
-                        </div>
+                    </div>
+                </div>
 
                 <div class="container-wrapper1" style="background-image: url(parallax_04.jpg); background-position: -5px -18.8562px;">
                     <!-- Founder Section
@@ -536,8 +534,8 @@
                                 <a href="https://www.facebook.com/share/SWQUuCLQzin5fhgm/?mibextid=LQQJ4d" target="_blank" class="fab fa-facebook-f"></a>
                                 
                             </div>
-                        </div>
-                    </div> -->
+                        </div>-->
+                </div> 
             
     
         <footer class="footer">
@@ -638,149 +636,115 @@
     <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        .modal {
-            display: none; /* Hidden by default */
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.4);
-            opacity: 0;
-            transition: opacity 0.5s ease; /* Smooth fade-in transition */
-        }
-
-        .modal.show {
-            display: block;
-            opacity: 1; /* Trigger the fade-in effect */
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 8% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 500px;
-            border-radius: 10px;
-            transform: translateY(-200px); /* Start above the view */
-            opacity: 0;
-            position: relative;
-            z-index: 1010;
-            transition: transform 0.5s ease, opacity 0.5s ease;
-            
-        }
-
-        .modal-content.show {
-            transform: translateY(0); /* Slide down into view */
-            opacity: 1; /* Make content visible */
-        }
-
-        .close-button {
-    color: #aaa;
-    background-color: #fefefe;
-    border: 1px solid #888;
-    border-radius: 4px;
-    font-size: 20px;
-    font-weight: bold;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
+/* Discount Popup Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; 
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    background: rgba(0,0,0,0.7);
     justify-content: center;
-    cursor: pointer !important;
+    align-items: center;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.modal-content.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-content.hide {
+    opacity: 0;
+    transform: translate(-50%, -60%) scale(0.9); /* goes slightly up */
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+.discount-content {
+    background: linear-gradient(135deg, #000000, #2b0000);
+    color: #fff;
     text-align: center;
-    line-height: 30px;
-    position: absolute; /* Position relative to .modal-content */
-    top: 10px; /* Distance from the top of .modal-content */
-    right: 10px; /* Distance from the right of .modal-content */
-    z-index: 11;
+    border: 2px solid red;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(255,0,0,0.8);
+    max-width: 450px;
 }
 
-.close-button:hover {
-    background-color: #ddd;
-    color: black;
+.discount-title {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    <!-- text-shadow: 0 0 5px #ff0000; -->
 }
 
+.discount-text {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
 
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        textarea {
-            color: black;
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
+.discount-text .highlight {
+    color: #ffcc00;
+    font-weight: bold;
+    font-size: 28px;
+}
 
-        button[type="submit"] {
-            width: 100%;
-            background-color: #f0000b;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+.discount-sub {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #ccc;
+}
 
-        button[type="submit"]:hover {
-            background-color: #ff6870;
-        }
-    </style>
+.discount-btn {
+    background: red;
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-<div id="contactFormModal" class="modal">
-    <div class="modal-content" id="modalContent">
-        <span class="close-button" id="closeButton">&times;</span>
-        <h2>Contact Us</h2>
-            <form id="contactform" class="row" action="contact.php" name="contactform" method="post">
-                <fieldset class="row-fluid">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <input type="text" name="first_name" id="first_name" class="form-control" placeholder="First Name" required>
-                    </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last Name" required>
-                    </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <input type="email" name="email" id="email" class="form-control" placeholder="Your Email" required>
-                    </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <input type="text" name="phone" id="phone" class="form-control" placeholder="Your Phone" required>
-                    </div>
-                    
-                    
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <textarea class="form-control" name="comments" id="comments" rows="6" placeholder="Give us more details.."></textarea>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
-                        <button type="submit" value="SEND" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block" style="width: 160px;">Send Message</button>
-                    </div>
-                </fieldset>
-            </form>
-            <div id="popup" style="display:none;">
-                <p>Thank you for your submission!</p>
-                <button onclick="closePopup()">Close</button>
-            </div>
-        </div>
-    </div><!-- end col -->
+.discount-btn:hover {
+    background: #ff4444;
+    box-shadow: 0 0 10px red;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+</style>
+<!-- 🚀 Discount Popup (Replaces Old Contact Popup) -->
+<div id="discountModal" class="modal">
+    <div class="modal-content discount-content" id="discountContent">
+        <span class="close-button" id="closeDiscount">&times;</span>
+        <h2 class="discount-title">🎉 Limited Time Offer! 🎉</h2>
+        <p class="discount-text">Get <span class="highlight">20% OFF</span> on all our courses!</p>
+        <p class="discount-sub">Hurry up, offer valid for a short time only.</p>
+    </div>
+</div>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    var modal = document.getElementById("contactFormModal");
-    var modalContent = document.getElementById("modalContent");
-    var closeButton = document.getElementById("closeButton");
+    var modal = document.getElementById("discountModal");
+    var modalContent = document.getElementById("discountContent");
+    var closeButton = document.getElementById("closeDiscount");
 
     // Detect refresh reliably
     var isReload = performance.navigation.type === performance.navigation.TYPE_RELOAD;
@@ -815,24 +779,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 });
-
-// Handle form submission
-document.getElementById("contactform").addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    var formData = new FormData(this);
-
-    fetch("contact.php", {
-        method: "POST",
-        body: formData
-    })
-    .then(response => response.text())
-    .then(data => {
-        alert("Form submitted successfully!");
-    })
-    .catch(error => console.error("Error:", error));
-});
 </script>
+
 
 
 

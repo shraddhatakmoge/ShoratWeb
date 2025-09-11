@@ -7,7 +7,7 @@
    
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
- 
+    <link rel="stylesheet" href="whatsappstick.css">
      <!-- Site Metas -->
     <title>Shorat Innovations</title>  
     <meta name="keywords" content="">
@@ -222,8 +222,7 @@
             </div>
             </div>
 
-            <div class="container-wrapper1">
-                <!-- Founder Section -->
+     <hr style="border: none; height: 8px; background: black;  margin: 30px 0; ">
 
     <footer class="footer">
         <div class="container">
@@ -355,6 +354,13 @@
     <script src="js/custom.js"></script>
     <script src="js/portfolio.js"></script>
     <script src="js/hoverdir.js"></script>    
-
+      <script>
+  const whatsappDiv = document.createElement('a');
+  whatsappDiv.href = "https://wa.me/918956569681?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services.";
+  whatsappDiv.target = "_blank";
+  whatsappDiv.id = "whatsappButton";
+  whatsappDiv.innerHTML = '<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">';
+  document.body.appendChild(whatsappDiv);
+</script>
 </body>
 </html>

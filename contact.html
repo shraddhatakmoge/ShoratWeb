@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Shorat Innovations</title>
-
+    <link rel="stylesheet" href="whatsappstick.css">
     <!-- Site Icons -->
     <link rel="shortcut icon" href="images/favcon1 (1) (1).ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="style.css">  
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/custom.css">
-
+    <link rel="stylesheet" href="whatsappstick.css">
     <!-- Custom styling for branches and forms -->
     <style>
     .branches {
@@ -37,6 +37,8 @@
       text-align: left;
       cursor: pointer;
       transition: 0.3s;
+      display: inline-block;
+      height: ;
     }
     .branch-info:hover {
       background: #ffeaea;
@@ -383,9 +385,9 @@ e
     <div class="branches">
       <h2 style="color:rgb(255, 255, 255);">Our Branches</h2>
 
-      <div class="branch-info" onclick="showForm('headOfficeForm')">
-        <h3>Wagholi-Pune - Branch</h3>
-        <h4>Head Office</h4>
+      <div class="both-container" style="gap: 0.5;display: flex;">
+        <div class="branch-info" onclick="showForm('headOfficeForm')">
+        <h3>Wagholi-Pune - Branch (Head Office)</h3>
         <p>Office no 104, Rainbow Crossroads, Bakori Phata, Wagholi, Pune.</p>
         <p><strong>Phone:</strong> 8956569681 / 9130067841</p>
       </div>
@@ -394,6 +396,7 @@ e
         <h3>AhilyaNagar - Branch </h3>
         <p>Bhutkarwadi chowk, near Hanuman Mandir, Balikashram Road, Ahilyanagar.</p>
         <p><strong>Phone:</strong> 8956007459</p>
+      </div>
       </div>
     </div>
 
@@ -423,7 +426,7 @@ e
     </div>
 
   
-
+    <hr style="border: none; height: 8px; background: black;  margin: 30px 0; ">
     <!-- ✅ FOOTER from your original code -->
   <footer class="footer">
             <div class="container">
@@ -500,9 +503,13 @@ e
   <!-- Copyright -->
   <div class="copyrights" style="background:#0d0d0d; padding:15px 0; margin-top:20px;">
     <div class="container text-center">
-      <p class="footer-company-name" style="margin:0; color:#aaa;">
-        All Rights Reserved. &copy; 2025 <span style="color:#ff0022;">Shorat Innovations Pvt Ltd</span>
-      </p>
+      <p>© <span id="year"></span> Shorat Innovations Pvt Ltd. All rights reserved.</p>
+                </footer>
+
+                <script>
+                document.getElementById("year").textContent = new Date().getFullYear();
+                </script>
+
     </div>
   </div>
 
@@ -562,6 +569,14 @@ e
         window.scrollTo({ top: document.getElementById(formId).offsetTop - 100, behavior: 'smooth' });
       }
     </script>
+    <script>
+  const whatsappDiv = document.createElement('a');
+  whatsappDiv.href = "https://wa.me/918956569681?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services.";
+  whatsappDiv.target = "_blank";
+  whatsappDiv.id = "whatsappButton";
+  whatsappDiv.innerHTML = '<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">';
+  document.body.appendChild(whatsappDiv);
+</script>
 </body>
 </html>
 

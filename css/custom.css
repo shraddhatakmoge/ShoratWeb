@@ -49,8 +49,8 @@ body {
 
   .about-icon {
     font-size: 55px;
-    color: #00f2fe;
-    margin-bottom: 20px;
+    color: #fe0059;
+    margin-bottom: 1px;
     transition: transform 0.4s ease, color 0.3s ease, text-shadow 0.3s ease;
   }
 
@@ -82,7 +82,7 @@ body {
 
   .service-card p {
     font-size: 15px;
-    color: #ccc;
+    color: #25c092;
     line-height: 1.7;
     margin-top: 10px;
   }

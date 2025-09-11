@@ -404,25 +404,27 @@ e
     <div id="headOfficeForm" class="branch-form">
       <h3 style="color:white;">Head Office Contact Form</h3>
       <form action="contact.php" method="POST">
-        <input type="text" placeholder="First Name" required>
-        <input type="text" placeholder="Last Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <input type="text" placeholder="Your Phone" required>
-        <textarea placeholder="Message for Head Office" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+    <input class="head" name="branch_name" value="Head Office" type="text" readonly>
+    <input type="text" name="first_name" placeholder="First Name" required>
+    <input type="text" name="last_name" placeholder="Last Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="text" name="phone" placeholder="Your Phone" required>
+    <textarea name="comments" placeholder="Message for Head Office" required></textarea>
+    <button type="submit">Send Message</button>
+</form>
     </div>
 
     <div id="branch2Form" class="branch-form">
       <h3 style="color:white;">Branch 2 Contact Form</h3>
       <form action="contact.php" method="POST">
-        <input type="text" placeholder="First Name" required>
-        <input type="text" placeholder="Last Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <input type="text" placeholder="Your Phone" required>
-        <textarea placeholder="Message for Branch 2" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+    <input class="head" name="branch_name" value="Branch 2" type="text" readonly>
+    <input type="text" name="first_name" placeholder="First Name" required>
+    <input type="text" name="last_name" placeholder="Last Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="text" name="phone" placeholder="Your Phone" required>
+    <textarea name="comments" placeholder="Message for Head Office" required></textarea>
+    <button type="submit">Send Message</button>
+</form>
     </div>
 
   
@@ -538,6 +540,10 @@ e
       formData.append("email", form.querySelector('input[placeholder="Your Email"]').value);
       formData.append("phone", form.querySelector('input[placeholder="Your Phone"]').value);
       formData.append("comments", form.querySelector('textarea').value);
+      formData.append("branch_name", form.querySelector(".head").value);
+
+
+
 
       fetch("contact.php", {
         method: "POST",
@@ -546,7 +552,7 @@ e
       .then(response => response.json())
       .then(data => {
         if (data.status === "success") {
-          alert("✅ " + data.message);
+          alert("✅ Message sent successfully !!");
           form.reset();
         } else {
           alert("❌ " + data.message);

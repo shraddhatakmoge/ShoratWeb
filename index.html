@@ -7,7 +7,7 @@
    
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
- 
+    <link rel="stylesheet" href="whatsappstick.css">
      <!-- Site Metas -->
     <title>Shorat Innovations</title>  
     <meta name="keywords" content="">
@@ -158,7 +158,7 @@
     }
     
     .homepage-three-title {
-        font-size: 24px;
+        -size: 24px;
     }
     
     .slide-text h2 {
@@ -216,10 +216,48 @@
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
+.courses-discount-banner {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 9999;
+  }
 
+  .courses-discount-track {
+    display: flex;
+    gap: 30px;
+    white-space: nowrap;
+    animation: scroll-left 25s linear infinite;
+  }
 
+  .discount-item {
+    display: inline-block;
+    background: linear-gradient(45deg, #8b0000, #ff0000);
+    color: #fff;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(255,0,0,0.5);
+    pointer-events: auto;
+  }
 
-    </style>
+  .discount-item:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+    </style>font
 
 </head>
 <body>
@@ -237,54 +275,65 @@
     </div><!-- end loader -->
     <!-- END LOADER -->
     
-	<div class="top-bar">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-6 col-sm-6">
-					<div class="left-top">
-						<div class="email-box">
-							<a href="mailto:admin@shoratinnovations.com?subject=Inquiry"><i class="fa fa-envelope-o" aria-hidden="true"></i>admin@shoratinnovations.com </a>
-						</div>
-						<div class="phone-box">
-							<a href="tel:1234567890"><i class="fa fa-phone" aria-hidden="true"></i> +91 89 5656 9681</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-sm-6">
-					<div class="right-top">
-						<div class="social-media1" style="float: right;">
-                            <a href="https://www.instagram.com/shoratinnovations?igsh=bDlsMWtqOWJiN2Fw&utm_source=qr" target="_blank" class="fab fa-instagram" style="background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); -webkit-background-clip:text;
-                            -webkit-text-fill-color: transparent;"></a>
-                             <a href="https://www.linkedin.com/company/shorat-innovations" target="_blank" class="fab fa-linkedin"></a>
-                             <a href="https://www.facebook.com/share/vESBnTsrXPKB7SqC/?mibextid=LQQJ4d" target="_blank" class="fab fa-facebook-f"></a>
-                             <a href="https://www.youtube.com/@shoratinnovations"  target="_blank" class="fab fa-youtube-play" style="color: red;"></a>
-                            
-                        </div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-    <header class="header header_style_01">
+	<!-- Top Bar -->
+<div class="top-bar">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 col-sm-6">
+                <div class="left-top">
+                    <div class="email-box">
+                        <a href="mailto:admin@shoratinnovations.com?subject=Inquiry">
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            admin@shoratinnovations.com
+                        </a>
+                    </div>
+                    <div class="phone-box">
+                        <a href="tel:+918956569681">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            +91 89 5656 9681
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <div class="right-top">
+                    <div class="social-media1" style="float: right;">
+                        <a href="https://www.instagram.com/shoratinnovations" target="_blank" class="fab fa-instagram"
+                           style="background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+                           -webkit-background-clip:text;-webkit-text-fill-color: transparent;"></a>
+                        <a href="https://www.linkedin.com/company/shorat-innovations" target="_blank" class="fab fa-linkedin"></a>
+                        <a href="https://www.facebook.com/share/vESBnTsrXPKB7SqC" target="_blank" class="fab fa-facebook-f"></a>
+                        <a href="https://www.youtube.com/@shoratinnovations" target="_blank" class="fab fa-youtube" style="color:red;"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <!-- Notification marquee -->
-    
-
+<!-- Main Header -->
+<header class="header header_style_01">
     <nav class="megamenu navbar navbar-default">
         <div class="container-fluid">
+            <!-- Brand Logo -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="images/logos/shorat.png" alt="image"></a>
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logos/shorat.png" alt="Shorat Innovations Logo">
+                </a>
             </div>
+
+            <!-- Navigation Links -->
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a class="active" href="index.html">Home</a></li>
-                    <li><a href="about-us.html">About us</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
                     <li><a href="services.html">Our Services</a></li>
                     <li><a href="courses.html">Courses</a></li>
                     <li><a href="internship.html">Internship</a></li>
@@ -300,6 +349,22 @@
 	<div class="slider-area">
         <div class="header-notification">
         
+
+    <div class="courses-discount-banner">
+  <div class="courses-discount-track">
+    <div class="discount-item">💻 Web Development - 20% Off</div>
+    <div class="discount-item">📱 Android Development - 15% Off</div>
+    <div class="discount-item">🤖 AI/ML Course - 25% Off</div>
+    <div class="discount-item">🌐 Full Stack Development - 30% Off</div>
+    <div class="discount-item">🎨 UI/UX Design - 10% Off</div>
+    <!-- Repeat items to make continuous effect -->
+    <div class="discount-item">💻 Web Development - 20% Off</div>
+    <div class="discount-item">📱 Android Development - 15% Off</div>
+    <div class="discount-item">🤖 AI/ML Course - 25% Off</div>
+    <div class="discount-item">🌐 Full Stack Development - 30% Off</div>
+    <div class="discount-item">🎨 UI/UX Design - 10% Off</div>
+  </div>
+</div>
 
     </div>
 		<div class="slider-wrapper owl-carousel">
@@ -390,30 +455,30 @@
             <div class="row text-center stat-wrap">
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <span data-scroll class="global-radius icon_wrap effect-1"><i class="flaticon-briefcase"></i></span>
-                    <p class="stat_count">150</p>
+                    <p class="stat_count">150+</p>
                     <h3>Completed Projects</h3>
                 </div><!-- end col -->
 
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <span data-scroll class="global-radius icon_wrap effect-1"><i class="flaticon-happy"></i></span>
-                    <p class="stat_count">500</p>
+                    <p class="stat_count">500+</p>
                     <h3>Happy Clients</h3>
                 </div><!-- end col -->
 
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <span data-scroll class="global-radius icon_wrap effect-1"><i class="flaticon-idea"></i></span>
-                    <p class="stat_count">300</p>
+                    <p class="stat_count">300 +</p>
                     <h3>Customer Services</h3>
                 </div><!-- end col -->
 
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <span data-scroll class="global-radius icon_wrap effect-1"><i class="flaticon-customer-service"></i></span>
-                    <p class="stat_count">1000</p>
+                    <p class="stat_count">1000+</p>
                     <h3>Answered Questions</h3>
                 </div><!-- end col -->
             </div><!-- end row -->
         </div><!-- end container -->
-    </div><!-- end section -->t
+    </div><!-- end section -->
 
             <div id="about" class="section wb">
                 <div class="container">
@@ -421,23 +486,25 @@
                         <h3 style="color: black;">Our Services</h3>
                         <p class="lead" style="color: black;">Our Service unlimited solutions to all your business needs.In the installation package we prepare search engine optimization, social media support, we provide corporate identity and graphic design services.</p>
                     </div>
-                   <div class="row text-center" style="width: 100%;">
-                   
+                   <div class="row text-center " style="width: 100%; ">
                         <div class="col-md-3 col-sm-6">
-                             <a href="contact.html">
+                            <a href="contact.html">
                             <div class="about-item">
                                 <div class="about-icon">
                                     <span class="icon icon-embed2"></span>
                                 </div>
                                 <div class="about-text">
                                     <h3> Web Development </a></h3>
-                                    <p>Custom web development that creates stunning, functional websites tailored to your business. Elevate your online presence!</p>
+                                    <p>
+                                        Custom web development that creates stunning, functional websites tailored to your business. Elevate your online presence!
+                                    </p>
+
                                 </div>
                             </div>
                             </a>
                         </div>
                         <div class="col-md-3 col-sm-6">
-                             <a href="contact.html">
+                            <a href="contact.html">
                             <div class="about-item">
                                 <div class="about-icon">
                                     <span class="icon icon-mobile2"></span>
@@ -503,70 +570,41 @@
                         </div>
                     </div>
                 </div><!-- end container -->
+
+            </body>
         
 	
                 <div id="test-box" class="section wb">
                     <div class="container" style="width: 100%;">
                         <div class="section-title text-center1" style="padding-top: 20px;">
                             <h3 style="text-align: center;">Team</h3>
-                            <p class="lead" style="color: black; text-align: center;">Our team consists of passionate and innovative professionals dedicated to delivering, <br> exceptional results in every project we undertake.</p>
+                            <p class="lead" style="color: black; text-align: center;">Our team consists of passionate and innovative professionals dedicated to delivering, <br> exceptional results in every project we undertake.</p>
                         <br><!-- end title -->
                         </div>
                     </div>
                 </div>
 
-                <div class="container-wrapper1" style="background-image: url(parallax_04.jpg); background-position: -5px -18.8562px;">
-                    <!-- Founder Section
-                    <div class="container1">
-                        <div class="image-container">
-                            <img src="akshay.jpg" alt="Founder Image">
-                        </div>
-                        <div class="info-container">
-                            <h1>Akshay Rathod</h1>
-                            <p>Founder & CEO</p>
-                            <p class="bio">Akshay Rathod is the Founder and CEO of Shorat Innovations Pvt Ltd, a company dedicated to delivering cutting-edge software solutions and providing top-notch training in various programming disciplines. With a strong background in full stack development, Akshay has over 4 years of experience in the field and has trained thousands of students across multiple programming languages.</p>
-                            <div class="social-media1">
-                                <a href="https://www.instagram.com/ceo.akshaysir?igsh=MW1kY2sycGd0OTJheA%3D%3D&utm_source=qr" target="_blank" class="fab fa-instagram" style="background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); -webkit-background-clip:text;
-                                -webkit-text-fill-color: transparent;"></a>
-                                 <a href="https://www.linkedin.com/in/akshay-sir?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="fab fa-linkedin"></a>
-                                <a href="https://www.youtube.com/@Programming_with_akshay_sir" target="_blank" class="fab fa-youtube" style="color: red;"></a>
-                               
-                                <a href="https://www.facebook.com/share/SWQUuCLQzin5fhgm/?mibextid=LQQJ4d" target="_blank" class="fab fa-facebook-f"></a>
-                                
-                            </div>
-                        </div>-->
-                </div> 
+                <hr style="border: none; height: 8px; background: black;  margin: 30px 0; ">
             
-    
         <footer class="footer">
             <div class="container">
                 <div class="row">
                     <!-- First Column -->
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="widget clearfix">
-                            <!-- <div class="widget-title">
-                                <img src="images/logos/shorat.png" alt="Company Logo" />
-                            </div>
-                            <h2>Head office </h2>
-                            <p style="color: black;">Office no 104, Rainbow Crossroads , Bakori Phata , Wagholi , pune.</p>
-                            <p style="color: black;">Phone : <br>
-                                8956569681  /
-                            9130067841 </p>
-                            <h2>Branch 2</h2>
-                            <p style="color: black;">Bhutkarwadi chowk,near hanuman mandir,Balikashram road , Ahilyanagar</p>
-                            <p style="color: black;">Phone : <br>
-                                8956007459</p> -->
+        
                             <div class="social-media1">
-                                <a href="https://www.instagram.com/ceo.akshaysir?igsh=MW1kY2sycGd0OTJheA%3D%3D&utm_source=qr" target="_blank" class="fa fa-instagram" style="background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); -webkit-background-clip:text;
-                            -webkit-text-fill-color: transparent;"></a>
-                             <a href="https://www.linkedin.com/company/shorat-innovations/>" target="_blank" class="fa fa-linkedin"></a>
-                            <a href="https://www.youtube.com/@Programming_with_akshay_sir" target="_blank" class="fa fa-youtube" style="color: red;"></a>
-                           
-                            <a href="https://www.facebook.com/share/vESBnTsrXPKB7SqC/?mibextid=LQQJ4d" target="_blank" class="fa fa-facebook-f"></a>
+                                <a href="https://www.instagram.com/shoratinnovations" target="_blank" class="fab fa-instagram" style="background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); -webkit-background-clip:text;
+                                -webkit-text-fill-color: transparent;"></a>
+                                 <a href="https://www.linkedin.com/company/shorat-innovations/>" target="_blank" class="fab fa-linkedin"></a>
+                                <a href="https://www.youtube.com/@Programming_with_akshay_sir" target="_blank" class="fab fa-youtube" style="color: red;"></a>
+                               
+                                <a href="https://www.facebook.com/share/vESBnTsrXPKB7SqC/?mibextid=LQQJ4d" target="_blank" class="fab fa-facebook-f"></a>
                                 
                             </div>
                         </div><!-- end clearfix -->
                     </div><!-- end col -->
+    
                 <!-- Second Column -->
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="widget clearfix">
@@ -579,7 +617,7 @@
                             <li><a href="services.html">Our Services <span class="icon icon-arrow-right2"></span></a></li>
                             <li><a href="courses.html">Courses <span class="icon icon-arrow-right2"></span></a></li>
                             <li><a href="internship.html">Internship <span class="icon icon-arrow-right2"></span></a></li>
-                            <li><a href="Career.html">Carrier <span class="icon icon-arrow-right2"></span></a></li>
+                            
                             <li><a href="contact.html">Contact <span class="icon icon-arrow-right2"></span></a></li>
                         </ul><!-- end links -->
                     </div><!-- end clearfix -->
@@ -636,115 +674,115 @@
     <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
 
     <style>
-/* Discount Popup Styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0; 
-    top: 0;
-    width: 100%; 
-    height: 100%;
-    background: rgba(0,0,0,0.7);
-    justify-content: center;
-    align-items: center;
-}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
-.modal-content {
-    position: absolute;
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.7);
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
-}
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            transition: opacity 0.5s ease; /* Smooth fade-in transition */
+        }
 
-.modal-content.show {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-}
+        .modal.show {
+            display: block;
+            opacity: 1; /* Trigger the fade-in effect */
+        }
 
-.modal-content.hide {
-    opacity: 0;
-    transform: translate(-50%, -60%) scale(0.9); /* goes slightly up */
-    transition: all 0.5s ease-in-out;
-}
+        .modal-content {
+            background-color: #fefefe;
+            margin: 8% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+            transform: translateY(-200px); /* Start above the view */
+            opacity: 0;
+            position: relative;
+            z-index: 1010;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+            
+        }
 
+        .modal-content.show {
+            transform: translateY(0); /* Slide down into view */
+            opacity: 1; /* Make content visible */
+        }
 
-
-.discount-content {
-    background: linear-gradient(135deg, #000000, #2b0000);
-    color: #fff;
-    text-align: center;
-    border: 2px solid red;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 0 15px rgba(255,0,0,0.8);
-    max-width: 450px;
-}
-
-.discount-title {
-    font-size: 26px;
-    margin-bottom: 15px;
-    color: #ffffff;
-    <!-- text-shadow: 0 0 5px #ff0000; -->
-}
-
-.discount-text {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.discount-text .highlight {
-    color: #ffcc00;
+        .close-button {
+    color: #aaa;
+    background-color: #fefefe;
+    border: 1px solid #888;
+    border-radius: 4px;
+    font-size: 20px;
     font-weight: bold;
-    font-size: 28px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer !important;
+    text-align: center;
+    line-height: 30px;
+    position: absolute; /* Position relative to .modal-content */
+    top: 10px; /* Distance from the top of .modal-content */
+    right: 10px; /* Distance from the right of .modal-content */
+    z-index: 11;
 }
 
-.discount-sub {
-    font-size: 16px;
-    margin-bottom: 20px;
-    color: #ccc;
+.close-button:hover {
+    background-color: #ddd;
+    color: black;
 }
 
-.discount-btn {
-    background: red;
-    color: white;
-    padding: 12px 25px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
 
-.discount-btn:hover {
-    background: #ff4444;
-    box-shadow: 0 0 10px red;
-}
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            color: black;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
 
-.close-button {
-    position: absolute;
-    top: 10px; right: 15px;
-    font-size: 28px;
-    cursor: pointer;
-    color: white;
-}
-</style>
-<!-- 🚀 Discount Popup (Replaces Old Contact Popup) -->
-<div id="discountModal" class="modal">
-    <div class="modal-content discount-content" id="discountContent">
-        <span class="close-button" id="closeDiscount">&times;</span>
-        <h2 class="discount-title">🎉 Limited Time Offer! 🎉</h2>
-        <p class="discount-text">Get <span class="highlight">20% OFF</span> on all our courses!</p>
-        <p class="discount-sub">Hurry up, offer valid for a short time only.</p>
-    </div>
-</div>
+        button[type="submit"] {
+            width: 100%;
+            background-color: #f0000b;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #ff6870;
+        }
+    </style>
+
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    var modal = document.getElementById("discountModal");
-    var modalContent = document.getElementById("discountContent");
-    var closeButton = document.getElementById("closeDiscount");
+    var modal = document.getElementById("contactFormModal");
+    var modalContent = document.getElementById("modalContent");
+    var closeButton = document.getElementById("closeButton");
 
     // Detect refresh reliably
     var isReload = performance.navigation.type === performance.navigation.TYPE_RELOAD;
@@ -779,8 +817,9 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 });
-</script>
 
+
+</script>
 
 
 
@@ -790,6 +829,55 @@ document.addEventListener("DOMContentLoaded", function() {
     <script src="js/custom.js"></script>
     <script src="js/portfolio.js"></script>
     <script src="js/hoverdir.js"></script>    
+    <script>
+  const whatsappDiv = document.createElement('a');
+  whatsappDiv.href = "https://wa.me/918956569681?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services.";
+  whatsappDiv.target = "_blank";
+  whatsappDiv.id = "whatsappButton";
+  whatsappDiv.innerHTML = '<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">';
+  document.body.appendChild(whatsappDiv);
+</script>
 
+<script>
+  // Function to animate numbers
+  function animateCounter(counter) {
+    const target = +counter.innerText; // get final number
+    let count = 0;
+    const speed = target / 100; // control speed
+
+    const updateCount = () => {
+      if (count < target) {
+        count += speed;
+        counter.innerText = Math.ceil(count);
+        requestAnimationFrame(updateCount);
+      } else {
+        counter.innerText = target; // set final number
+      }
+    };
+
+    updateCount();
+  }
+
+  // Detect when counters are visible
+  function startCounters() {
+    const counters = document.querySelectorAll('.stat_count');
+    counters.forEach(counter => {
+      animateCounter(counter);
+    });
+  }
+
+  // Run animation when section comes into view
+  let started = false;
+  window.addEventListener('scroll', () => {
+    const section = document.querySelector('.stat-wrap');
+    const sectionTop = section.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (!started && sectionTop < windowHeight) {
+      startCounters();
+      started = true;
+    }
+  });
+</script> 
 </body>
 </html>

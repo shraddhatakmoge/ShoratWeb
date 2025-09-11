@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
     <!-- Basic -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">   
    
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
- 
+    <link rel="stylesheet" href="whatsappstick.css">
      <!-- Site Metas -->
     <title>Shorat Innovations</title>  
     <meta name="keywords" content="">
@@ -36,6 +36,36 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <style>
+          .service-card {
+        position: relative;
+        border-radius: 12px;
+        padding: 25px;
+        background: #fff;
+        overflow: hidden;
+        cursor: pointer;
+        transition: background 0.2s ease;
+      }
+
+      /* Color glow layer */
+      .service-card::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), 
+                    rgba(255, 0, 0, 0.25), transparent 70%);
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      /* Show effect on hover */
+      .service-card:hover::before {
+        opacity: 1;
+      }
+
+  </style>
 
 </head>
 <body>
@@ -127,13 +157,13 @@
     <div id="about" class="section wb">
         <div class="container">
             <div class="section-title text-center">
-                <h3 style="color: black;">Our Services</h3>
-                <p class="lead" style="color: black;">Our Service unlimited solutions to all your business needs. In the installation package we prepare search engine optimization, social media support, we provide corporate identity and graphic design services.</p>
+              <h3 style="color: black;">Our Services</h3>
+              <p class="lead" style="color: black;">Our Service unlimited solutions to all your business needs. In the installation package we prepare search engine optimization, social media support, we provide corporate identity and graphic design services.</p>
             </div>
-           <div class="row text-center" style="width: 100%;">
-				<div class="col-md-3 col-sm-6">
-                    <a href="contact.html">
-					<div class="about-item">
+            <div class="row text-center" style="width: 100%;">
+              <div class="col-md-3 col-sm-6">
+                <a href="contact.html">
+					    <div class="about-item">
 						<div class="about-icon">
 							<span class="icon icon-embed2"></span>
 						</div>
@@ -209,90 +239,10 @@
                     </a>
 				</div>
 			</div>
-        </div><!-- end container -->
-</div>
-	
-	
-
-    <div class="row text-center mt-5" style="width: 100%;">
-      
-    <!-- Services Section -->
-<div id="about" class="section wb">
-  <div class="container">
-    <!-- Section Title -->
-    <div class="section-title text-center mb-5">
-      <h3 class="services-title">🚀 Our Services</h3>
-      <p class="services-subtitle">
-        Unlimited solutions to all your business needs — from <b>web development</b> to <b>digital marketing</b>.  
-        We craft innovative solutions that elevate your brand and deliver impact.
-      </p>
-    </div>
-
-    <!-- Service Cards -->
-    <div class="row text-center">
-      <div class="col-md-4 col-sm-6">
-        <div class="service-card">
-          <div class="about-icon"><span class="icon icon-embed2"></span></div>
-          <div class="about-text">
-            <h3><a href="#">Web Development</a></h3>
-            <p>Stunning, functional websites tailored to your business. Elevate your online presence!</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6">
-        <div class="service-card">
-          <div class="about-icon"><span class="icon icon-mobile2"></span></div>
-          <div class="about-text">
-            <h3><a href="#">Mobile Applications</a></h3>
-            <p>Custom, user-friendly apps that engage your audience and drive business growth.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6">
-        <div class="service-card">
-          <div class="about-icon"><span class="icon icon-profile"></span></div>
-          <div class="about-text">
-            <h3><a href="#">Billing Systems</a></h3>
-            <p>Simplify payments & manage finances with our intuitive billing software.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6">
-        <div class="service-card">
-          <div class="about-icon"><span class="icon icon-display"></span></div>
-          <div class="about-text">
-            <h3><a href="#">Software Development</a></h3>
-            <p>Custom solutions built for your unique needs. Transform ideas into power.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6">
-        <div class="service-card">
-          <div class="about-icon"><span class="icon icon-database"></span></div>
-          <div class="about-text">
-            <h3><a href="#">Graphic Design</a></h3>
-            <p>Creative visuals that captivate and communicate your brand’s message.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6">
-        <div class="service-card">
-          <div class="about-icon"><span class="icon icon-magic-wand"></span></div>
-          <div class="about-text">
-            <h3><a href="#">Digital Marketing</a></h3>
-            <p>Smart marketing strategies that amplify your reach and drive growth.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    </div><!-- end container -->
 </div>
 
+<<<<<<< HEAD
         <div id="test-box" class="section wb">
             <div class="container" style="width: 100%;">
                 <div class="section-title text-center1" style="padding-top: 20px;">
@@ -303,26 +253,19 @@
                 </div>
                 </div>
     
+=======
+ <hr style="border: none; height: 8px; background: black;  margin: 30px 0; ">
+
+>>>>>>> 8c3ab3112d93a523f43367f435aac4dd358defa3
         <footer class="footer">
-            <div class="container">
+            <div class="container" style="width: 100%;">
                 <div class="row">
                     <!-- First Column -->
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="widget clearfix">
-                            <!-- <div class="widget-title">
-                                <img src="images/logos/shorat.png" alt="Company Logo" />
-                            </div> -->
-                            <!-- <h2>Head office </h2>
-                            <p style="color: black;">Office no 104, Rainbow Crossroads , Bakori Phata , Wagholi , pune.
-                            <p style="color: black;">Phone : <br>
-                                8956569681  /
-                            9130067841 </p>
-                            <h2>Branch 2</h2>
-                            <p style="color: black;">Bhutkarwadi chowk,near hanuman mandir,Balikashram road , Ahilyanagar
-                            <p style="color: black;">Phone : <br>
-                                8956007459</p> -->
+        
                             <div class="social-media1">
-                                <a href="https://www.instagram.com/ceo.akshaysir?igsh=MW1kY2sycGd0OTJheA%3D%3D&utm_source=qr" target="_blank" class="fab fa-instagram" style="background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); -webkit-background-clip:text;
+                                <a href="https://www.instagram.com/shoratinnovations" target="_blank" class="fab fa-instagram" style="background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); -webkit-background-clip:text;
                                 -webkit-text-fill-color: transparent;"></a>
                                  <a href="https://www.linkedin.com/company/shorat-innovations/>" target="_blank" class="fab fa-linkedin"></a>
                                 <a href="https://www.youtube.com/@Programming_with_akshay_sir" target="_blank" class="fab fa-youtube" style="color: red;"></a>
@@ -405,30 +348,29 @@
     <script src="js/custom.js"></script>
     <script src="js/portfolio.js"></script>
     <script src="js/hoverdir.js"></script>    
+    <script>
+  const whatsappDiv = document.createElement('a');
+  whatsappDiv.href = "https://wa.me/918956569681?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services.";
+  whatsappDiv.target = "_blank";
+  whatsappDiv.id = "whatsappButton";
+  whatsappDiv.innerHTML = '<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">';
+  document.body.appendChild(whatsappDiv);
+  
 
+  document.querySelectorAll('.service-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--x', x + 'px');
+      card.style.setProperty('--y', y + 'px');
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.setProperty('--x', '50%');
+      card.style.setProperty('--y', '50%');
+    });
+  });
+</script>
 </body>
 </html>
-
-
-
-
-<!-- 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    // Floating animation for each card
-    document.querySelectorAll(".service-card").forEach((card, i) => {
-      card.style.animation = `float ${3 + i}s ease-in-out infinite alternate`;
-    });
-
-    // Scroll reveal effect
-    const cards = document.querySelectorAll(".service-card");
-    window.addEventListener("scroll", () => {
-      const triggerBottom = window.innerHeight * 0.85;
-      cards.forEach(card => {
-        const cardTop = card.getBoundingClientRect().top;
-        if (cardTop < triggerBottom) {
-          card.classList.add("show");
-        }
-      });
-    });
- </script> -->

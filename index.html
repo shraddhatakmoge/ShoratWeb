@@ -486,18 +486,16 @@
                         <h3 style="color: black;">Our Services</h3>
                         <p class="lead" style="color: black;">Our Service unlimited solutions to all your business needs.In the installation package we prepare search engine optimization, social media support, we provide corporate identity and graphic design services.</p>
                     </div>
-                   <div class="row text-center " style="width: 100%; ">
+                   <div class="row text-center">
                         <div class="col-md-3 col-sm-6">
                             <a href="contact.html">
-                            <div class="about-item">
+                            <div class="about-item" style="height: 270px;">
                                 <div class="about-icon">
-                                    <span class="icon icon-embed2"></span>
+                                    <span class="icon icon-embed2" style="height: 10px;" ></span>
                                 </div>
-                                <div class="about-text">
-                                    <h3> Web Development </a></h3>
-                                    <p>
-                                        Custom web development that creates stunning, functional websites tailored to your business. Elevate your online presence!
-                                    </p>
+                                <div class="about-text" style="margin-top: 4px ;">
+                                    <h3> Web Development </h3>
+                                    <p>Custom web development that creates stunning, functional websites tailored to your business. Elevate your online presence!</p>
 
                                 </div>
                             </div>
@@ -505,11 +503,11 @@
                         </div>
                         <div class="col-md-3 col-sm-6">
                             <a href="contact.html">
-                            <div class="about-item">
-                                <div class="about-icon">
+                            <div class="about-item"  style="height: 270px;">
+                                <div class="about-icon" >
                                     <span class="icon icon-mobile2"></span>
                                 </div>
-                                <div class="about-text">
+                                <div class="about-text" >
                                     <h3>Mobile Application</h3>
                                     <p>We develop custom, user-friendly mobile apps that engage your audience and drive business growth. Let's bring your app idea to life!</p>
                                 </div>
@@ -518,7 +516,7 @@
                         </div>
                         <div class="col-md-3 col-sm-6">
                             <a href="contact.html">
-                            <div class="about-item">
+                            <div class="about-item" style="height: 270px;">
                                 <div class="about-icon">
                                     <span class="icon icon-profile"></span>
                                 </div>
@@ -531,7 +529,7 @@
                         </div>
                         <div class="col-md-3 col-sm-6">
                             <a href="contact.html">
-                            <div class="about-item">
+                            <div class="about-item" style="height: 270px;">
                                 <div class="about-icon">
                                     <span class="icon icon-display"></span>
                                 </div>
@@ -544,7 +542,7 @@
                         </div>
                         <div class="col-md-3 col-sm-6">
                             <a href="contact.html">
-                            <div class="about-item">
+                            <div class="about-item" style="height: 270px;">
                                 <div class="about-icon">
                                     <span class="icon icon-database"></span>
                                 </div>
@@ -557,8 +555,8 @@
                         </div>
                         <div class="col-md-3 col-sm-6">
                             <a href="contact.html">
-                            <div class="about-item">
-                                <div class="about-icon">
+                            <div class="about-item" style="height: 270px;">
+                                <div class="about-icon" >
                                     <span class="icon icon-magic-wand"></span>
                                 </div>
                                 <div class="about-text">
@@ -570,6 +568,7 @@
                         </div>
                     </div>
                 </div><!-- end container -->
+            </div>
 
             </body>
         
@@ -673,111 +672,7 @@
 
     <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        .modal {
-            display: none; /* Hidden by default */
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.4);
-            opacity: 0;
-            transition: opacity 0.5s ease; /* Smooth fade-in transition */
-        }
-
-        .modal.show {
-            display: block;
-            opacity: 1; /* Trigger the fade-in effect */
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 8% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 500px;
-            border-radius: 10px;
-            transform: translateY(-200px); /* Start above the view */
-            opacity: 0;
-            position: relative;
-            z-index: 1010;
-            transition: transform 0.5s ease, opacity 0.5s ease;
-            
-        }
-
-        .modal-content.show {
-            transform: translateY(0); /* Slide down into view */
-            opacity: 1; /* Make content visible */
-        }
-
-        .close-button {
-    color: #aaa;
-    background-color: #fefefe;
-    border: 1px solid #888;
-    border-radius: 4px;
-    font-size: 20px;
-    font-weight: bold;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer !important;
-    text-align: center;
-    line-height: 30px;
-    position: absolute; /* Position relative to .modal-content */
-    top: 10px; /* Distance from the top of .modal-content */
-    right: 10px; /* Distance from the right of .modal-content */
-    z-index: 11;
-}
-
-.close-button:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        textarea {
-            color: black;
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        button[type="submit"] {
-            width: 100%;
-            background-color: #f0000b;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        button[type="submit"]:hover {
-            background-color: #ff6870;
-        }
-    </style>
-
+    
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     var modal = document.getElementById("contactFormModal");

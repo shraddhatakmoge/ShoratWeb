@@ -2,7 +2,7 @@ body {
     
     font-family: 'Poppins', sans-serif;
   }
-
+/* 
   .service-card {
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
     backdrop-filter: blur(15px);
@@ -49,12 +49,11 @@ body {
 
   .about-icon {
     font-size: 55px;
-    color: #fe0059;
-    margin-bottom: 1px;
+    color: #fe0059; 
     transition: transform 0.4s ease, color 0.3s ease, text-shadow 0.3s ease;
-  }
+  } */
 
-  .service-card:hover .about-icon {
+  /* .service-card:hover .about-icon {
     transform: scale(1.4) rotate(12deg);
     color: #ff4b1f;
     text-shadow: 0 0 25px #ff4b1f, 0 0 40px #ff9068;
@@ -85,4 +84,4 @@ body {
     color: #25c092;
     line-height: 1.7;
     margin-top: 10px;
-  }
+  } */

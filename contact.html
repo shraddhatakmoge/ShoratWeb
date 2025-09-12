@@ -22,37 +22,26 @@
     <link rel="stylesheet" href="whatsappstick.css">
     <!-- Custom styling for branches and forms -->
     <style>
-    .branches {
-      text-align: center;
-      margin: 40px auto;
+
+    .footer .social-media1 {
+      display: flex;
+      justify-content: center;   /* centers icons */
+      gap: 20px;                 /* space between icons */
+      margin-bottom: 20px;
+      margin-right: 150px;
     }
 
-    .branch-info {
-      max-width: 500px;
-      margin: 20px auto;
-      padding: 20px;
-      background: #f7f7f7;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      text-align: left;
-      cursor: pointer;
-      transition: 0.3s;
+    .footer .social-media1 a {
       display: inline-block;
-      height: ;
+      font-size: 24px; /* icon size */
+      /* color: #000;     default color */
+      text-decoration: none;
+      transition: color 0.3s ease;
     }
-    .branch-info:hover {
-      background: #ffeaea;
-      transform: scale(1.02);
-    }
-    .branch-info h3 {
-      margin-bottom: 10px;
-      color: #ff0022;
-    }
-    .branch-info p {
-      margin: 6px 0;
-      color: #333;
-      font-size: 16px;
-    }
+
+.footer .social-media1 a:hover {
+  color: rgb(1, 53, 136); /* hover effect for icons */
+}
 
     .branch-form {
       display: none;
@@ -101,6 +90,84 @@
       background: linear-gradient(45deg, #ff3b42, #ff7f7f);
       transform: scale(1.02);
     }
+    .branches {
+      text-align: center;
+      margin: 10px auto;
+      background-color: #c4c4c4;
+      height: 500px;
+      padding: 60px 0 40px;
+      box-sizing: border-box; 
+    }
+
+    .branches h1 {
+     font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px; /* keep some space below */
+    text-align: center; /* ensure centered */
+    color: #de0000;
+    }
+
+    .branch-info {
+      max-width: 500px;
+      margin: 20px;
+      padding: 50px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: left;
+      transition: 0.3s;
+      display: inline-block;
+      margin-top: 20px;
+    
+    }
+
+    .branch-info:hover {
+      background: #e8e8e8;
+      transform: scale(1.02);
+    }
+
+    .branch-info h3 {
+      margin-bottom: 10px;
+      color: #d00707;
+    }
+
+    .branch-info p {
+      margin: 6px 0;
+      color: #333;
+      font-size: 16px;
+    }
+
+    /* Buttons inside branch cards */
+    .branch-buttons {
+      margin-top: 15px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .branch-buttons a,
+    .branch-buttons button {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .btn-contact {
+      background: #d5102a;
+    }
+
+    .btn-contact:hover {
+      background: #ff2828;
+      transform: scale(1.05);
+    }
+
+    
 
     .social-icons {
       text-align: center;
@@ -380,52 +447,62 @@ e
             </div>
         </div>
     </div>
-
+   
     <!-- Branch Section -->
     <div class="branches">
-      <h2 style="color:rgb(255, 255, 255);">Our Branches</h2>
+    <h1>Our Branches</h1>
 
-      <div class="both-container" style="gap: 0.5;display: flex;">
-        <div class="branch-info" onclick="showForm('headOfficeForm')">
-        <h3>Wagholi-Pune - Branch (Head Office)</h3>
-        <p>Office no 104, Rainbow Crossroads, Bakori Phata, Wagholi, Pune.</p>
-        <p><strong>Phone:</strong> 8956569681 / 9130067841</p>
-      </div>
+    <!-- Branch 1 -->
+    <div class="branch-info">
+      <h3>Wagholi-Pune - (Head Office)</h3>
+      <p>Office no 104, Rainbow Crossroads, Bakori Phata, Wagholi, Pune.</p>
+      <p><strong>Phone:</strong> 8956569681 / 9130067841</p>
 
-      <div class="branch-info" onclick="showForm('branch2Form')">
-        <h3>AhilyaNagar - Branch </h3>
-        <p>Bhutkarwadi chowk, near Hanuman Mandir, Balikashram Road, Ahilyanagar.</p>
-        <p><strong>Phone:</strong> 8956007459</p>
-      </div>
+      <!-- ✅ Buttons -->
+      <div class="branch-buttons">
+        <button class="btn-contact" onclick="showForm('headOfficeForm')">Contact</button>
       </div>
     </div>
 
-    <!-- Forms -->
-    <div id="headOfficeForm" class="branch-form">
-      <h3 style="color:white;">Head Office Contact Form</h3>
-      <form action="contact.php" method="POST">
-    <input class="head" name="branch_name" value="Head Office" type="text" readonly>
-    <input type="text" name="first_name" placeholder="First Name" required>
-    <input type="text" name="last_name" placeholder="Last Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <input type="text" name="phone" placeholder="Your Phone" required>
-    <textarea name="comments" placeholder="Message for Head Office" required></textarea>
-    <button type="submit">Send Message</button>
-</form>
-    </div>
+    <!-- Branch 2 -->
+    <div class="branch-info">
+      <h3>AhilyaNagar - (Branch)</h3>
+      <p>Bhutkarwadi chowk, near Hanuman Mandir, Balikashram Road, Ahilyanagar.</p>
+      <p><strong>Phone:</strong> 8956007459</p>
 
-    <div id="branch2Form" class="branch-form">
-      <h3 style="color:white;">Branch 2 Contact Form</h3>
-      <form action="contact.php" method="POST">
-    <input class="head" name="branch_name" value="Branch 2" type="text" readonly>
-    <input type="text" name="first_name" placeholder="First Name" required>
-    <input type="text" name="last_name" placeholder="Last Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <input type="text" name="phone" placeholder="Your Phone" required>
-    <textarea name="comments" placeholder="Message for Head Office" required></textarea>
-    <button type="submit">Send Message</button>
-</form>
+      <!-- ✅ Buttons -->
+      <div class="branch-buttons">
+        <button class="btn-contact" onclick="showForm('branch2Form')">Contact</button>
+      </div>
     </div>
+  </div>
+
+  <!-- Branch Forms (hidden by default) -->
+  <div id="headOfficeForm" class="branch-form" style="display:none;">
+    <h3 style="color:white;">Head Office Contact Form</h3>
+    <form action="contact.php" method="POST">
+      <input class="head" name="branch_name" value="Head Office" type="text" readonly>
+      <input type="text" name="first_name" placeholder="First Name" required>
+      <input type="text" name="last_name" placeholder="Last Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="phone" placeholder="Your Phone" required>
+      <textarea name="comments" placeholder="Message for Head Office" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <div id="branch2Form" class="branch-form" style="display:none;">
+    <h3 style="color:white;">Branch 2 Contact Form</h3>
+    <form action="contact.php" method="POST">
+      <input class="head" name="branch_name" value="Branch 2" type="text" readonly>
+      <input type="text" name="first_name" placeholder="First Name" required>
+      <input type="text" name="last_name" placeholder="Last Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="phone" placeholder="Your Phone" required>
+      <textarea name="comments" placeholder="Message for Branch 2" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
 
   
     <hr style="border: none; height: 8px; background: black;  margin: 30px 0; ">
@@ -434,20 +511,40 @@ e
             <div class="container">
                 <div class="row">
                     <!-- First Column -->
-                    <div class="col-md-4 col-sm-4 col-xs-12 ">
+                    <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="widget clearfix">
-                            
-                            <div class="social-media1">
-                                <a href="https://www.instagram.com/shoratinnovations" target="_blank" class="fa fa-instagram" style="background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); -webkit-background-clip:text;
-                            -webkit-text-fill-color: transparent;"></a>
-                             <a href="https://www.linkedin.com/company/shorat-innovations/>" target="_blank" class="fa fa-linkedin"></a>
-                            <a href="https://www.youtube.com/@Programming_with_akshay_sir" target="_blank" class="fa fa-youtube" style="color: red;"></a>
-                           
-                            <a href="https://www.facebook.com/share/vESBnTsrXPKB7SqC/?mibextid=LQQJ4d" target="_blank" class="fa fa-facebook-f"></a>
-                                
+        
+                            <div class="social-media1" style="display:flex; gap:20px; justify-content:center; font-size:24px;">
+
+                                <!-- Instagram -->
+                                <a href="https://www.instagram.com/shoratinnovations" target="_blank" class="fab fa-instagram"
+                                style="background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); -webkit-background-clip:text; -webkit-text-fill-color: transparent; transition:0.3s;"
+                                onmouseover="this.style.opacity='0.6'"
+                                onmouseout="this.style.opacity='1'"></a>
+
+                                <!-- LinkedIn -->
+                                <a href="https://www.linkedin.com/company/shorat-innovations/" target="_blank" class="fab fa-linkedin"
+                                style="color:#0A66C2; transition:0.3s;"
+                                onmouseover="this.style.color='#004182'"
+                                onmouseout="this.style.color='#0A66C2'"></a>
+
+                                <!-- YouTube -->
+                                <a href="https://www.youtube.com/@Programming_with_akshay_sir" target="_blank" class="fab fa-youtube"
+                                style="color:red; transition:0.3s;"
+                                onmouseover="this.style.color='#b30000'"
+                                onmouseout="this.style.color='red'"></a>
+
+                                <!-- Facebook -->
+                                <a href="https://www.facebook.com/share/vESBnTsrXPKB7SqC/?mibextid=LQQJ4d" target="_blank" class="fab fa-facebook-f"
+                                style="color:#1877F2; transition:0.3s;"
+                                onmouseover="this.style.color='#0d47a1'"
+                                onmouseout="this.style.color='#1877F2'"></a>
+
                             </div>
+
                         </div><!-- end clearfix -->
                     </div><!-- end col -->
+    
                 <!-- Second Column -->
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="widget clearfix">
@@ -460,7 +557,7 @@ e
                             <li><a href="services.html">Our Services <span class="icon icon-arrow-right2"></span></a></li>
                             <li><a href="courses.html">Courses <span class="icon icon-arrow-right2"></span></a></li>
                             <li><a href="internship.html">Internship <span class="icon icon-arrow-right2"></span></a></li>
-                            <li><a href="team.html">Team <span class="icon icon-arrow-right2"></span></a></li>
+                            
                             <li><a href="contact.html">Contact <span class="icon icon-arrow-right2"></span></a></li>
                         </ul><!-- end links -->
                     </div><!-- end clearfix -->
@@ -500,7 +597,8 @@ e
     
             </div><!-- end row -->
         </div><!-- end container -->
-    </footer>
+    </footer><!-- end footer -->
+
 
   <!-- Copyright -->
   <div class="copyrights" style="background:#0d0d0d; padding:15px 0; margin-top:20px;">
@@ -567,22 +665,27 @@ e
 </script>
 
     <script src="js/all.js"></script>
-    <script src="js/custom.js"></script>
-    <script>
-      function showForm(formId) {
-        document.querySelectorAll(".branch-form").forEach(div => div.style.display = "none");
-        document.getElementById(formId).style.display = "block";
-        window.scrollTo({ top: document.getElementById(formId).offsetTop - 100, behavior: 'smooth' });
-      }
-    </script>
-    <script>
-  const whatsappDiv = document.createElement('a');
-  whatsappDiv.href = "https://wa.me/918956569681?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services.";
-  whatsappDiv.target = "_blank";
-  whatsappDiv.id = "whatsappButton";
-  whatsappDiv.innerHTML = '<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">';
-  document.body.appendChild(whatsappDiv);
-</script>
+      <script src="js/custom.js"></script>
+      <script>
+        function showForm(formId) {
+          document.querySelectorAll(".branch-form").forEach(div => div.style.display = "none");
+          document.getElementById(formId).style.display = "block";
+          window.scrollTo({ top: document.getElementById(formId).offsetTop - 100, behavior: 'smooth' });
+        }
+      </script>
+
+
+      <script>
+        const whatsappDiv = document.createElement('a');
+        whatsappDiv.href = "https://wa.me/918956569681?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services.";
+        whatsappDiv.target = "_blank";
+        whatsappDiv.id = "whatsappButton";
+        whatsappDiv.innerHTML = '<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">';
+        document.body.appendChild(whatsappDiv);
+      </script>
+
+     
+
 </body>
 </html>
 

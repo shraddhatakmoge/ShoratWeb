@@ -43,6 +43,25 @@
       color: #e63946; /* text turns red */
       border-radius: 5px;
     }
+    .footer .social-media1 {
+        display: flex;
+        justify-content: center;   /* centers icons */
+        gap: 20px;                 /* space between icons */
+        margin-bottom: 20px;
+        margin-right: 150px;
+        }
+
+        .footer .social-media1 a {
+        display: inline-block;
+        font-size: 24px; /* icon size */
+        /* color: #000;     default color */
+        text-decoration: none;
+        transition: color 0.3s ease;
+        }
+
+        .footer .social-media1 a:hover {
+        color: rgb(1, 53, 136); /* hover effect for icons */
+        }
     </style>
 
 
@@ -237,34 +256,42 @@
         <hr style="border: none; height: 8px; background: black;  margin: 30px 0; ">
            
     <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <!-- First Column -->
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="widget clearfix">
-                        <!-- <div class="widget-title">
-                            <img src="images/logos/shorat.png" alt="Company Logo" />
-                        </div>
-                        <h2>Head office </h2>
-                            <p style="color: black;">Office no 104, Rainbow Crossroads , Bakori Phata , Wagholi , pune.
-                            <p style="color: black;">Phone : <br>
-                                8956569681  /
-                            9130067841 </p>
-                            <h2>Branch 2</h2>
-                            <p style="color: black;">Bhutkarwadi chowk,near hanuman mandir,Balikashram road , Ahilyanagar
-                            <p style="color: black;">Phone : <br>
-                                8956007459</p> -->
-                        <div class="social-media1">
-                            <a href="https://www.instagram.com/shoratinnovations" target="_blank" class="fa fa-instagram" style="background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); -webkit-background-clip:text;
-                            -webkit-text-fill-color: transparent;"></a>
-                             <a href="https://www.linkedin.com/company/shorat-innovations/>" target="_blank" class="fa fa-linkedin"></a>
-                            <a href="https://www.youtube.com/@Programming_with_akshay_sir" target="_blank" class="fa fa-youtube" style="color: red;"></a>
-                           
-                            <a href="https://www.facebook.com/share/vESBnTsrXPKB7SqC/?mibextid=LQQJ4d" target="_blank" class="fa fa-facebook-f"></a>
-                            
-                        </div>
-                    </div><!-- end clearfix -->
-                </div><!-- end col -->
+            <div class="container">
+                <div class="row">
+                    <!-- First Column -->
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="widget clearfix">
+        
+                            <div class="social-media1" style="display:flex; gap:20px; justify-content:center; font-size:24px;">
+
+                                <!-- Instagram -->
+                                <a href="https://www.instagram.com/shoratinnovations" target="_blank" class="fab fa-instagram"
+                                style="background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); -webkit-background-clip:text; -webkit-text-fill-color: transparent; transition:0.3s;"
+                                onmouseover="this.style.opacity='0.6'"
+                                onmouseout="this.style.opacity='1'"></a>
+
+                                <!-- LinkedIn -->
+                                <a href="https://www.linkedin.com/company/shorat-innovations/" target="_blank" class="fab fa-linkedin"
+                                style="color:#0A66C2; transition:0.3s;"
+                                onmouseover="this.style.color='#004182'"
+                                onmouseout="this.style.color='#0A66C2'"></a>
+
+                                <!-- YouTube -->
+                                <a href="https://www.youtube.com/@Programming_with_akshay_sir" target="_blank" class="fab fa-youtube"
+                                style="color:red; transition:0.3s;"
+                                onmouseover="this.style.color='#b30000'"
+                                onmouseout="this.style.color='red'"></a>
+
+                                <!-- Facebook -->
+                                <a href="https://www.facebook.com/share/vESBnTsrXPKB7SqC/?mibextid=LQQJ4d" target="_blank" class="fab fa-facebook-f"
+                                style="color:#1877F2; transition:0.3s;"
+                                onmouseover="this.style.color='#0d47a1'"
+                                onmouseout="this.style.color='#1877F2'"></a>
+
+                            </div>
+
+                        </div><!-- end clearfix -->
+                    </div><!-- end col -->
     
                 <!-- Second Column -->
                 <div class="col-md-4 col-sm-4 col-xs-12">
@@ -278,6 +305,7 @@
                             <li><a href="services.html">Our Services <span class="icon icon-arrow-right2"></span></a></li>
                             <li><a href="courses.html">Courses <span class="icon icon-arrow-right2"></span></a></li>
                             <li><a href="internship.html">Internship <span class="icon icon-arrow-right2"></span></a></li>
+                            
                             <li><a href="contact.html">Contact <span class="icon icon-arrow-right2"></span></a></li>
                         </ul><!-- end links -->
                     </div><!-- end clearfix -->
@@ -318,6 +346,7 @@
             </div><!-- end row -->
         </div><!-- end container -->
     </footer><!-- end footer -->
+
 
     <div class="copyrights">
         <div class="container">

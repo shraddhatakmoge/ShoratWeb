@@ -25,6 +25,26 @@
     <script src="js/modernizer.js"></script>
 
   <style>
+    
+    .footer .social-media1 {
+      display: flex;
+      justify-content: center;   /* centers icons */
+      gap: 20px;                 /* space between icons */
+      margin-bottom: 20px;
+      margin-right: 150px;
+    }
+
+    .footer .social-media1 a {
+      display: inline-block;
+      font-size: 24px; /* icon size */
+      /* color: #000;     default color */
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer .social-media1 a:hover {
+      color: rgb(1, 53, 136); /* hover effect for icons */
+    }
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -38,6 +58,14 @@
       text-align: center;
       position: static;
     }
+    @keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
     header h1 {
       font-size: 2.5rem;
       margin-bottom: 10px;
@@ -369,6 +397,11 @@
       jobList.appendChild(div);
     });
   </script>
+  <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/hoverdir.js"></script> 
   <script>
   const whatsappDiv = document.createElement('a');
   whatsappDiv.href = "https://wa.me/918956569681?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services.";

@@ -38,9 +38,29 @@
     <![endif]-->
 
     <style>
-          .service-card {
+      .footer .social-media1 {
+          display: flex;
+          justify-content: center;   /* centers icons */
+          gap: 20px;                 /* space between icons */
+          margin-bottom: 20px;
+          margin-right: 150px;
+        }
+
+        .footer .social-media1 a {
+          display: inline-block;
+          font-size: 24px; /* icon size */
+          /* color: #000;     default color */
+          text-decoration: none;
+          transition: color 0.3s ease;
+        }
+
+        .footer .social-media1 a:hover {
+          color: rgb(1, 53, 136); /* hover effect for icons */
+        }
+          
+        .service-card {
         position: relative;
-        border-radius: 12px;
+        border-radius: 4px;
         padding: 25px;
         background: #fff;
         overflow: hidden;
@@ -59,6 +79,60 @@
         opacity: 0;
         transition: opacity 0.3s ease;
       }
+      /* .about-item {
+            border: 1px solid #ddd;
+            border-radius: 10px;   /* reduced border radius */
+            /* padding: 20px; */
+            /* text-align: center; */
+            /* background: #fff; */
+            /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
+            /* transition: all 0.3s ease; */
+            /* cursor: pointer; */
+        /* } 
+
+        /* Hover effect */
+        .about-item:hover {
+            border-color: #e60000;
+            box-shadow: 0 6px 14px rgba(230,0,0,0.2);
+            transform: translateY(-5px);
+        }
+        .about-item {
+        border: 1px solid #ddd;
+        border-radius: 8px;   /* ⬅️ adjust this value (smaller = less curve) */
+        padding: 20px;
+        background: #fff;
+        transition: all 0.3s ease;
+    }
+
+        /* Icon */
+        .about-item .about-icon span {
+            font-size: 40px;
+            color: #e60000;
+            /* margin-bottom: 15px; */
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        .about-item:hover .about-icon span {
+            margin-bottom: -50px;
+            border: 1px solid #ddd;
+            color: #b30000; /* darker red on hover */
+        }
+
+        /* Title */
+        .about-item h3 {
+            font-weight: bold;
+            /* margin-top:10px ; */
+            color: #1a1a1a;
+        }
+
+        /* Text */
+        .about-item p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
 
       /* Show effect on hover */
       .service-card:hover::before {
@@ -131,7 +205,7 @@
                         <li><a href="courses.html">Courses</a></li>
                         <li><a href="internship.html">Internship</a></li>
                         <li><a href="career.html">Career</a></li>
-						            <li><a href="contact.html">Contact</a></li>
+						<li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -166,6 +240,7 @@
         <!-- Grid container -->
         <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
 
+<<<<<<< HEAD
             <!-- Service Card Example with Icon/Image -->
             <a href="contact.html" style="text-decoration: none;">
                 <div style="background-color: #fff; padding: 20px; border-radius: 8px; border: 1px solid #ddd; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer;"
@@ -180,6 +255,106 @@
                     <p style="color: #333; font-size: 14px;">
                         Stunning websites that drive business success.
                     </p>
+=======
+       <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <!-- First Column -->
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="widget clearfix">
+        
+                            <div class="social-media1" style="display:flex; gap:20px; justify-content:center; font-size:24px;">
+
+                                <!-- Instagram -->
+                                <a href="https://www.instagram.com/shoratinnovations" target="_blank" class="fab fa-instagram"
+                                style="background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); -webkit-background-clip:text; -webkit-text-fill-color: transparent; transition:0.3s;"
+                                onmouseover="this.style.opacity='0.6'"
+                                onmouseout="this.style.opacity='1'"></a>
+
+                                <!-- LinkedIn -->
+                                <a href="https://www.linkedin.com/company/shorat-innovations/" target="_blank" class="fab fa-linkedin"
+                                style="color:#0A66C2; transition:0.3s;"
+                                onmouseover="this.style.color='#004182'"
+                                onmouseout="this.style.color='#0A66C2'"></a>
+
+                                <!-- YouTube -->
+                                <a href="https://www.youtube.com/@Programming_with_akshay_sir" target="_blank" class="fab fa-youtube"
+                                style="color:red; transition:0.3s;"
+                                onmouseover="this.style.color='#b30000'"
+                                onmouseout="this.style.color='red'"></a>
+
+                                <!-- Facebook -->
+                                <a href="https://www.facebook.com/share/vESBnTsrXPKB7SqC/?mibextid=LQQJ4d" target="_blank" class="fab fa-facebook-f"
+                                style="color:#1877F2; transition:0.3s;"
+                                onmouseover="this.style.color='#0d47a1'"
+                                onmouseout="this.style.color='#1877F2'"></a>
+
+                            </div>
+
+                        </div><!-- end clearfix -->
+                    </div><!-- end col -->
+    
+                <!-- Second Column -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Pages</h3>
+                        </div>
+                        <ul class="footer-links hov">
+                            <li><a href="index.html">Home <span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="about-us.html">About Us <span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="services.html">Our Services <span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="courses.html">Courses <span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="internship.html">Internship <span class="icon icon-arrow-right2"></span></a></li>
+                            
+                            <li><a href="contact.html">Contact <span class="icon icon-arrow-right2"></span></a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+    
+                <!-- Third Column -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Services</h3>
+                        </div>
+                        <ul class="footer-links hov">
+                            <li><a href="services.html">Mobile App<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="services.html">Software Developmet<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="services.html">Web Development<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="services.html">Graphic Design<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="services.html">Digital Media Marketing<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="services.html">Billing Software<span class="icon icon-arrow-right2"></span></a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Courses</h3>
+                        </div>
+                        <ul class="footer-links hov">
+                            <li><a href="courses.html">Full Stack Development<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="courses.html">Web Development<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="courses.html">Data Analyst<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="courses.html">Android Development<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="courses.html">Data Science<span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="courses.html">Flutter Development<span class="icon icon-arrow-right2"></span></a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+    
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </footer><!-- end footer -->
+
+
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-left">                   
+                    <p class="footer-company-name">All Rights Reserved. &copy; 2024 <a href="#">Shorat Innovations Pvt Ltd</a> </p>
+>>>>>>> 3d11570f35fcae90f1580dbbd03ccf69d9606a9c
                 </div>
             </a>
 
@@ -389,6 +564,44 @@
       card.style.setProperty('--y', '50%');
     });
   });
+</script>
+
+<script>
+    // JavaScript for the card hover effect on "Our Services" cards
+    document.querySelectorAll('.about-item').forEach(card => {
+        // Create a glow layer
+        const glow = document.createElement('div');
+        glow.classList.add('card-glow');
+        glow.style.position = 'absolute';
+        glow.style.top = 0;
+        glow.style.left = 0;
+        glow.style.width = '100%';
+        glow.style.height = '100%';
+        glow.style.pointerEvents = 'none';
+        glow.style.transition = 'background 0.2s ease';
+        card.style.position = 'relative';
+        card.appendChild(glow);
+
+        // Mouse move glow
+        card.addEventListener('mousemove', function(e) {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            glow.style.background = `
+                radial-gradient(
+                    circle at ${x}px ${y}px,
+                    rgba(255, 0, 0, 0.3),
+                    transparent 60%
+                )
+            `;
+        });
+
+        // Remove glow on mouse leave
+        card.addEventListener('mouseleave', function() {
+            glow.style.background = 'radial-gradient(circle at center, rgba(255, 0, 0, 0), transparent 60%)';
+        });
+    });
 </script>
 </body>
 </html>

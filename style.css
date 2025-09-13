@@ -4345,9 +4345,80 @@ button-container {
     animation: lightning-2 1.5s linear infinite;
 } */
 
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+@keyframes lightning-1 {
+    0%, 100% {
+        opacity: 0.3;
+        transform: translateY(-60px) translateX(-60px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0) translateX(0);
+    }
+} */
+
+/* @keyframes lightning-2 {
+    0%, 100% {
+        opacity: 0.3;
+        transform: translateY(-80px) translateX(-80px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0) translateX(0);
+    }
+}
+
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        opacity: 1;
+    }
+    20%, 24%, 55% {
+        opacity: 0.4;
+    }
+} */
+
+/* @keyframes blink {
+    0%, 49%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+} */
+
+/* @keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 40px rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+} */
+
+/* .lightning-btn::before {
+    animation: lightning-1 1s linear infinite, flicker 2s infinite;
+}
+
+.lightning-btn::after {
+    animation: lightning-2 1s linear infinite, flicker 2s infinite;
+}
+
+.lightning-btn:hover::before,
+.lightning-btn:hover::after {
+    top: 150%;
+    left: 150%;
+} */
+>>>>>>> c10bc472bf92a56fa218693a843b159776a5e38d

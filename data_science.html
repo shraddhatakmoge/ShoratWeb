@@ -306,28 +306,52 @@
                 padding: 0 8px;
             }
         }
-                .benefits-box {
-            background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* subtle gradient */
+              /* Enroll Button */
+        .lightning-btn {
+            background: linear-gradient(135deg, #d70004, #dc000b);
+            color: white;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0 8px 20px rgba(177, 0, 9, 0.3);
+            transition: all 0.3s ease;
+            width: 65%;
+            display: block;
+            text-align: center;
+        }
+
+        .lightning-btn:hover {
+            background: linear-gradient(135deg, rgb(199, 63, 69), #de3a42);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 25px rgba(220, 0, 11, 0.5);
+        }
+
+        /* Benefits Box */
+        .benefits-box {
+            background: linear-gradient(135deg, #fdfbfb, #ebedee);
             border-radius: 15px;
-            padding: 30px 25px;
-            max-width: 400px;
+            padding: 25px 20px;
             margin: 20px auto;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
             transition: transform 0.3s, box-shadow 0.3s;
-            width: 500px;
+            width: 400px;
         }
 
         .benefits-box:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
             box-shadow: 0 15px 30px rgba(0,0,0,0.2);
         }
 
         .benefits-box h3 {
             text-align: center;
-            color: #de030e;
+            color: #dc000b;
             font-family: 'Arial', sans-serif;
-            margin-bottom: 20px;
-            font-size: 24px;
+            margin-bottom: 18px;
+            font-size: 22px;
             font-weight: bold;
         }
 
@@ -338,27 +362,25 @@
 
         .benefits-box ul li {
             position: relative;
-            padding-left: 25px;
+            padding-left: 28px;
             margin-bottom: 12px;
             font-size: 16px;
             color: #333;
-            transition: color 0.3s;
+            transition: color 0.3s, font-weight 0.3s;
         }
 
         .benefits-box ul li::before {
             content: '✔';
             position: absolute;
             left: 0;
-            color: #e30000; /* icon color */
+            color: #dc000b;
             font-weight: bold;
         }
 
         .benefits-box ul li:hover {
-        
+            color: #dc000b;
             font-weight: bold;
         }
-
-        
     </style>
     <body>
     <div class="header1">
@@ -550,9 +572,7 @@
         
         <div class="sidebar">
             <div class="contact-box">
-                   <button id="lightning-button" class="lightning-btn" 
-                        style="background-color:#dc000b; color:white; padding:12px 25px; border:none; border-radius:8px; cursor:pointer; font-size:18px;" 
-                        onclick="window.location.href='contact.html';">
+                   <button id="lightning-button" class="lightning-btn"onclick="window.location.href='contact.html';">
                     Enroll Now
                     </button>  
                 </div>
@@ -574,10 +594,7 @@
         </div>
     </div>
 
-    <div class="training-details">
-        <h3>Training Details</h3>
-        <p>At the end of the  Data Science, you will be able to write professional applications using Data Science...</p>
-    </div>
+   
 
     <script>
         var acc = document.getElementsByClassName("accordion-button");
@@ -596,91 +613,87 @@
         }
     </script>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <!-- First Column -->
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="widget clearfix">
-                        <div class="widget-title">
-                            <img src="images/logos/shorat.png" alt="Company Logo" />
-                        </div>
-                        <h2>Head office </h2>
-                            <p style="color: black;">Office no 104, Rainbow Crossroads , Bakori Phata , Wagholi , pune.</p>
-                            <p style="color: black;">Phone : <br>
-                                8956569681  /
-                            9130067841 </p>
-                            <h2>Branch 2</h2>
-                            <p style="color: black;">Bhutkarwadi chowk,near hanuman mandir,Balikashram road , Ahilyanagar</p>
+    
 
-                            <p style="color: black;">Phone : <br>
-                                8956007459</p>
-                        <div class="social-media1">
-                            <a href="https://www.instagram.com/shoratinnovations?igsh=bDlsMWtqOWJiN2Fw&utm_source=qr" target="_blank" class="fab fa-instagram" style="background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); -webkit-background-clip:text;
-                        -webkit-text-fill-color: transparent;"></a>
-                         <a href="https://www.linkedin.com/company/shorat-innovations/>" target="_blank" class="fab fa-linkedin"></a>
-                        <a href="https://www.youtube.com/@Programming_with_akshay_sir" target="_blank" class="fab fa-youtube" style="color: red;"></a>
-                       
-                        <a href="https://www.facebook.com/share/vESBnTsrXPKB7SqC/?mibextid=LQQJ4d" target="_blank" class="fab fa-facebook-f"></a>
-                            
-                        </div>
-                    </div><!-- end clearfix -->
-                </div><!-- end col -->
     
-                <!-- Second Column -->
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="widget clearfix">
-                        <div class="widget-title">
-                            <h3>Pages</h3>
-                        </div>
-                        <ul class="footer-links hov">
-                            <li><a href="index.html">Home <span class="icon icon-arrow-right2"></span></a></li>
-                            <li><a href="about-us.html">About Us <span class="icon icon-arrow-right2"></span></a></li>
-                            <li><a href="services.html">Our Services <span class="icon icon-arrow-right2"></span></a></li>
-                            <li><a href="courses.html">Courses <span class="icon icon-arrow-right2"></span></a></li>
-                            <li><a href="internship.html">Internship <span class="icon icon-arrow-right2"></span></a></li>
-                            <li><a href="team.html">Team <span class="icon icon-arrow-right2"></span></a></li>
-                            <li><a href="pricing.html">Placement <span class="icon icon-arrow-right2"></span></a></li>
-                            <li><a href="contact.html">Contact <span class="icon icon-arrow-right2"></span></a></li>
-                        </ul><!-- end links -->
-                    </div><!-- end clearfix -->
-                </div><!-- end col -->
-    
-                <!-- Third Column -->
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="widget clearfix">
-                        <div class="widget-title">
-                            <h3>Services</h3>
-                        </div>
-                        <ul class="footer-links hov">
-                            <li><a href="#">Mobile App<span class="icon icon-arrow-right2"></span></a></li>
-                            <li><a href="#">Software Developmet<span class="icon icon-arrow-right2"></span></a></li>
-                            <li><a href="#">Web Development<span class="icon icon-arrow-right2"></span></a></li>
-                            <li><a href="#">Graphic Design<span class="icon icon-arrow-right2"></span></a></li>
-                            <li><a href="#">Digital Media Marketing<span class="icon icon-arrow-right2"></span></a></li>
-                            <li><a href="#">Billing Software<span class="icon icon-arrow-right2"></span></a></li>
-                        </ul><!-- end links -->
-                    </div><!-- end clearfix -->
-                </div><!-- end col -->
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="widget clearfix">
-                        <div class="widget-title">
-                            <h3>Courses</h3>
-                        </div>
-                        <ul class="footer-links hov">
-                            <li><a href="#">Full Stack Development<span class="icon icon-arrow-right2"></span></a></li>
-                            <li><a href="#">Web Development<span class="icon icon-arrow-right2"></span></a></li>
-                            <li><a href="#">Data Analyst<span class="icon icon-arrow-right2"></span></a></li>
-                            <li><a href="#">Android Development<span class="icon icon-arrow-right2"></span></a></li>
-                            <li><a href="#">Data Science<span class="icon icon-arrow-right2"></span></a></li>
-                            <li><a href="#">Flutter Development<span class="icon icon-arrow-right2"></span></a></li>
-                        </ul><!-- end links -->
-                    </div><!-- end clearfix -->
-                </div><!-- end col -->
-    
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </footer><!-- end footer -->
+            
+
+       
+<!-- Footer Starts -->
+<footer style="background-color: #222; color: #fff; padding: 40px 20px; font-family: Arial, sans-serif;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 30px;">
+
+        <!-- Left Side: Icons + YouTube Video -->
+        <div style="flex: 1 1 300px; min-width: 300px;">
+            <div style="display: flex; gap: 15px; font-size: 24px; margin-bottom: 20px;">
+                <a href="https://www.instagram.com/shoratinnovations" target="_blank"
+                    style="color: #E1306C; text-decoration: none;"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/shorat-innovations/" target="_blank"
+                    style="color: #0077b5; text-decoration: none;"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/@Programming_with_akshay_sir" target="_blank"
+                    style="color: red; text-decoration: none;"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.facebook.com/share/vESBnTsrXPKB7SqC/?mibextid=LQQJ4d" target="_blank"
+                    style="color: #4267B2; text-decoration: none;"><i class="fab fa-facebook-f"></i></a>
+            </div>
+
+            <div style="background-color: #333; padding: 10px; border-radius: 8px; display: inline-block;">
+                <iframe width="320" height="180"
+                    src="https://www.youtube.com/embed/UrdjsutyXUs?si=2ep2Vq5wA6iiSjE2"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                    style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Right Side: Three Columns -->
+        <div style="flex: 2 1 600px; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+
+            <!-- Column 1: Pages -->
+            <div style="flex: 1; min-width: 150px;">
+                <h3 style="font-size: 18px; margin-bottom: 15px;">Pages</h3>
+                <ul style="list-style: none; padding: 0; line-height: 2;">
+                    <li><a href="index.html" style="color: #ddd; text-decoration: none;">Home</a></li>
+                    <li><a href="about-us.html" style="color: #ddd; text-decoration: none;">About Us</a></li>
+                    <li><a href="services.html" style="color: #ddd; text-decoration: none;">Our Services</a></li>
+                    <li><a href="courses.html" style="color: #ddd; text-decoration: none;">Courses</a></li>
+                    <li><a href="internship.html" style="color: #ddd; text-decoration: none;">Internship</a></li>
+                    <li><a href="contact.html" style="color: #ddd; text-decoration: none;">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2: Services -->
+            <div style="flex: 1; min-width: 150px;">
+                <h3 style="font-size: 18px; margin-bottom: 15px;">Services</h3>
+                <ul style="list-style: none; padding: 0; line-height: 2;">
+                    <li><a href="services.html" style="color: #ddd; text-decoration: none;">Mobile App</a></li>
+                    <li><a href="services.html" style="color: #ddd; text-decoration: none;">Software Development</a></li>
+                    <li><a href="services.html" style="color: #ddd; text-decoration: none;">Web Development</a></li>
+                    <li><a href="services.html" style="color: #ddd; text-decoration: none;">Graphic Design</a></li>
+                    <li><a href="services.html" style="color: #ddd; text-decoration: none;">Digital Media Marketing</a></li>
+                    <li><a href="services.html" style="color: #ddd; text-decoration: none;">Billing Software</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Courses -->
+            <div style="flex: 1; min-width: 150px;">
+                <h3 style="font-size: 18px; margin-bottom: 15px;">Courses</h3>
+                <ul style="list-style: none; padding: 0; line-height: 2;">
+                    <li><a href="courses.html" style="color: #ddd; text-decoration: none;">Full Stack Development</a></li>
+                    <li><a href="courses.html" style="color: #ddd; text-decoration: none;">Web Development</a></li>
+                    <li><a href="courses.html" style="color: #ddd; text-decoration: none;">Data Analyst</a></li>
+                    <li><a href="courses.html" style="color: #ddd; text-decoration: none;">Android Development</a></li>
+                    <li><a href="courses.html" style="color: #ddd; text-decoration: none;">Data Science</a></li>
+                    <li><a href="courses.html" style="color: #ddd; text-decoration: none;">Flutter Development</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+
 
     <div class="copyrights">
         <div class="container">

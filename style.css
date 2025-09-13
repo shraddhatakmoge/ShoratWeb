@@ -4304,23 +4304,25 @@ button-container {
     position: relative;
     padding: 15px 30px;
     font-size: 20px;
+    font-weight: bold;
     color: #ffffff;
     background-color: #c21922;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     overflow: hidden;
     outline: none;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-    transition: transform 0.1s ease-in-out;
-    animation: blink 3s infinite, flicker 2s infinite, pulse 2s infinite;
+    transition: transform 0.2s ease-in-out;
+   
 }
 
 .lightning-btn:hover {
     transform: scale(1.1);
 }
 
+/* Lightning streaks */
 .lightning-btn::before,
 .lightning-btn::after {
     content: "";
@@ -4346,71 +4348,9 @@ button-container {
     animation: lightning-2 1.5s linear infinite;
 }
 
-@keyframes lightning-1 {
-    0%, 100% {
-        opacity: 0.3;
-        transform: translateY(-60px) translateX(-60px);
-    }
-    50% {
-        opacity: 1;
-        transform: translateY(0) translateX(0);
-    }
-}
 
-@keyframes lightning-2 {
-    0%, 100% {
-        opacity: 0.3;
-        transform: translateY(-80px) translateX(-80px);
-    }
-    50% {
-        opacity: 1;
-        transform: translateY(0) translateX(0);
-    }
-}
 
-@keyframes flicker {
-    0%, 18%, 22%, 25%, 53%, 57%, 100% {
-        opacity: 1;
-    }
-    20%, 24%, 55% {
-        opacity: 0.4;
-    }
-}
 
-@keyframes blink {
-    0%, 49%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-}
 
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-    }
-    50% {
-        transform: scale(1.05);
-        box-shadow: 0 0 40px rgba(255, 255, 255, 0.8);
-    }
-    100% {
-        transform: scale(1);
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-    }
-}
 
-.lightning-btn::before {
-    animation: lightning-1 1s linear infinite, flicker 2s infinite;
-}
 
-.lightning-btn::after {
-    animation: lightning-2 1s linear infinite, flicker 2s infinite;
-}
-
-.lightning-btn:hover::before,
-.lightning-btn:hover::after {
-    top: 150%;
-    left: 150%;
-}

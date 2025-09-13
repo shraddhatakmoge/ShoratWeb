@@ -282,6 +282,34 @@
             }
         }
 
+        /* Benifit box css */
+                /* Sidebar container */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Contact Button Styling */
+        .contact-box button {
+            background-color: #dc000b;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-box button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        }
+
+       
         @media (max-width: 480px) {
             .header1 h1 {
                 font-size: 28px;
@@ -300,6 +328,58 @@
                 padding: 0 8px;
             }
         }
+        .benefits-box {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* subtle gradient */
+    border-radius: 15px;
+    padding: 30px 25px;
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 500px;
+}
+
+.benefits-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.benefits-box h3 {
+    text-align: center;
+    color: #de030e;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.benefits-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.benefits-box ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.benefits-box ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #e30000; /* icon color */
+    font-weight: bold;
+}
+
+.benefits-box ul li:hover {
+  
+    font-weight: bold;
+}
+
     </style>
 </head>
 <body>
@@ -425,7 +505,11 @@
     
         <div class="sidebar">
             <div class="contact-box">
-                <button id="lightning-button" class="lightning-btn" onclick="window.location.href='contact.html';">Enroll Now</button>
+                   <button id="lightning-button" class="lightning-btn" 
+                        style="background-color:#dc000b; color:white; padding:12px 25px; border:none; border-radius:8px; cursor:pointer; font-size:18px;" 
+                        onclick="window.location.href='contact.html';">
+                    Enroll Now
+                    </button>  
             </div>
             <div class="benefits-box">
                 <h3>Benefits of the Training</h3>

@@ -4296,10 +4296,7 @@ button-container {
     font-weight: bold;
 }
 
-
-
-
-
+/* 
 .lightning-btn {
     position: relative;
     padding: 15px 30px;
@@ -4320,10 +4317,10 @@ button-container {
 
 .lightning-btn:hover {
     transform: scale(1.1);
-}
+} */
 
 /* Lightning streaks */
-.lightning-btn::before,
+/* .lightning-btn::before,
 .lightning-btn::after {
     content: "";
     position: absolute;
@@ -4346,7 +4343,7 @@ button-container {
     left: -80px;
     background: rgba(255, 255, 255, 0.6);
     animation: lightning-2 1.5s linear infinite;
-}
+} */
 
 
 

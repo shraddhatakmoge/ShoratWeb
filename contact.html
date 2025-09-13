@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shorat Innovations</title>
+    <link rel="stylesheet" href="whatsappstick.css">
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favcon1 (1) (1).ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Bootstrap & CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">  
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="whatsappstick.css">
+    <!-- Custom styling for branches and forms -->
+    <style>
+
+    .footer .social-media1 {
+      display: flex;
+      justify-content: center;   /* centers icons */
+      gap: 20px;                 /* space between icons */
+      margin-bottom: 20px;
+      margin-right: 150px;
+    }
+
+    .footer .social-media1 a {
+      display: inline-block;
+      font-size: 24px; /* icon size */
+      /* color: #000;     default color */
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+.footer .social-media1 a:hover {
+  color: rgb(1, 53, 136); /* hover effect for icons */
+}
+
+    .branch-form {
+      display: none;
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 25px;
+      background: #858585;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+    .branch-form input,
+    .branch-form textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1.5px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      margin-bottom: 15px;
+      background: #fafafa;
+      outline: none;
+      transition: 0.3s;
+    }
+    .branch-form input:focus,
+    .branch-form textarea:focus {
+      border-color: #4285f4;
+      background: #fff;
+      box-shadow: 0 0 5px rgba(66,133,244,0.3);
+    }
+    .branch-form textarea {
+      resize: none;
+      height: 120px;
+    }
+    .branch-form button {
+      width: 100%;
+      padding: 12px;
+      font-size: 18px;
+      font-weight: 600;
+      background: linear-gradient(45deg, #fd2626, #ff0022);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .branch-form button:hover {
+      background: linear-gradient(45deg, #ff3b42, #ff7f7f);
+      transform: scale(1.02);
+    }
+    .branches {
+      text-align: center;
+      margin: 10px auto;
+      background-color: #c4c4c4;
+      height: 500px;
+      padding: 60px 0 40px;
+      box-sizing: border-box; 
+    }
+
+    .branches h1 {
+     font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px; /* keep some space below */
+    text-align: center; /* ensure centered */
+    color: #de0000;
+    }
+
+    .branch-info {
+      max-width: 500px;
+      margin: 20px;
+      padding: 50px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: left;
+      transition: 0.3s;
+      display: inline-block;
+      margin-top: 20px;
+    
+    }
+
+    .branch-info:hover {
+      background: #e8e8e8;
+      transform: scale(1.02);
+    }
+
+    .branch-info h3 {
+      margin-bottom: 10px;
+      color: #d00707;
+    }
+
+    .branch-info p {
+      margin: 6px 0;
+      color: #333;
+      font-size: 16px;
+    }
+
+    /* Buttons inside branch cards */
+    .branch-buttons {
+      margin-top: 15px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .branch-buttons a,
+    .branch-buttons button {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .btn-contact {
+      background: #d5102a;
+    }
+
+    .btn-contact:hover {
+      background: #ff2828;
+      transform: scale(1.05);
+    }
+
+    
+
+    .social-icons {
+      text-align: center;
+      margin: 20px;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      font-size: 24px;
+      color: #ff0022;
+      transition: 0.3s;
+    }
+    .social-icons a:hover {
+      color: #333;
+    }
+
+    .contact_form button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .address-item {
+        text-align: center;
+        padding: 15px;
+        width: 100%;
+    }
+
+    .address-item h3 {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .address-item p {
+        font-size: 14px;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pd-add {
+        width: 100% !important;
+        padding: 0 10px;
+    }
+
+    .col-md-offset-1.col-sm-10.col-md-10.col-sm-offset-1 {
+        width: 100%;
+    }
+    #popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    z-index: 9999;
+}
+#popup p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+#popup button {
+    background: #f0000b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#popup button:hover {
+    background: #c0392b;
+}
+e
+
+    .address-icon {
+        font-size: 24px;
+    }
+
+    #popup {
+        width: 90%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #popup button {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-md-8.col-md-offset-2 {
+        width: 90% !important;  /* Adjust width */
+        margin: 0 auto !important; /* Center form */
+        padding: 10px;
+    }
+
+    .contact_form {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 15px;
+        margin: 0 auto; /* Ensures centering */
+    }
+
+    .contact_form input,
+    .contact_form textarea {
+        width: 100% !important;
+        font-size: 14px;
+        padding: 12px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .contact_form button {
+        width: 100% !important;
+        padding: 12px;
+        font-size: 16px;
+        background: #f0000b;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .contact_form button:hover {
+        background: #f0000b;
+    }
+
+    #popup {
+        width: 90%;
+        padding: 20px;
+        text-align: center;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #popup button {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        background: #e74c3c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #popup button:hover {
+        background: #c0392b;
+    }
+}
+
+    </style>
+</head>
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <div class="loader">
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__ball"></div>
+		</div>
+    </div><!-- end loader -->
+    <!-- END LOADER -->
+    
+	<!-- <div class="top-bar">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<div class="left-top">
+						<div class="email-box">
+							<a href="mailto:admin@shoratinnovations.com?subject=Inquiry"><i class="fa fa-envelope-o" aria-hidden="true"></i>admin@shoratinnovations.com </a>
+						</div>
+						<div class="phone-box">
+							<a href="tel:1234567890"><i class="fa fa-phone" aria-hidden="true"></i> +91 89 5656 9681</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6">
+					<div class="right-top">
+						<div class="social-media1" style="float: right;">
+                            <a href="https://www.instagram.com/shoratinnovations?igsh=bDlsMWtqOWJiN2Fw&utm_source=qr" target="_blank" class="fab fa-instagram" style="background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); -webkit-background-clip:text;
+                            -webkit-text-fill-color: transparent;"></a>
+                             <a href="https://www.linkedin.com/company/shorat-innovations" target="_blank" class="fab fa-linkedin"></a>
+                             <a href="https://www.facebook.com/share/vESBnTsrXPKB7SqC/?mibextid=LQQJ4d" target="_blank" class="fab fa-facebook-f"></a>
+                             <a href="https://www.youtube.com/@shoratinnovations"  target="_blank" class="fab fa-youtube-play" style="color: red;"></a>
+                             -->
+<body>
+    <!-- ✅ HEADER from your original code -->
+    <div class="top-bar">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="left-top">
+                        <div class="email-box">
+                            <a href="mailto:admin@shoratinnovations.com?subject=Inquiry">
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>admin@shoratinnovations.com 
+                            </a>
+
+                        </div>
+                        <div class="phone-box">
+                            <a href="tel:8956569681"><i class="fa fa-phone" aria-hidden="true"></i> +91 89 5656 9681</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="right-top">
+                        <div class="social-media1" style="float: right;">
+                            <a href="https://www.instagram.com/shoratinnovations" target="_blank" 
+                               class="fa fa-instagram" 
+                               style="background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); -webkit-background-clip:text; -webkit-text-fill-color: transparent;"></a>
+                            <a href="https://www.linkedin.com/company/shorat-innovations" target="_blank" class="fa fa-linkedin"></a>
+                            <a href="https://www.youtube.com/@Programming_with_akshay_sir" target="_blank" class="fa fa-youtube" style="color:red;"></a>
+                            <a href="https://www.facebook.com/share/vESBnTsrXPKB7SqC/" target="_blank" class="fa fa-facebook-f"></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header header_style_01">
+        <nav class="megamenu navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html"><img src="images/logos/shorat.png" alt="image"></a>
+                </div>
+                 <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="internship.html">Internship</a></li>
+                        <li><a href="Career.html">Career</a></li>
+                        <li><a class="active" href="contact.html">Contact</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <div class="banner-area banner-bg-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="banner">
+                        <h2>Contact Us</h2>
+                        <ul class="page-title-link">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <!-- Branch Section -->
+    <div class="branches">
+    <h1>Our Branches</h1>
+
+    <!-- Branch 1 -->
+    <div class="branch-info">
+      <h3>Wagholi-Pune - (Head Office)</h3>
+      <p>Office no 104, Rainbow Crossroads, Bakori Phata, Wagholi, Pune.</p>
+      <p><strong>Phone:</strong> 8956569681 / 9130067841</p>
+
+      <!-- ✅ Buttons -->
+      <div class="branch-buttons">
+        <button class="btn-contact" onclick="showForm('headOfficeForm')">Contact</button>
+      </div>
+    </div>
+
+    <!-- Branch 2 -->
+    <div class="branch-info">
+      <h3>AhilyaNagar - (Branch)</h3>
+      <p>Bhutkarwadi chowk, near Hanuman Mandir, Balikashram Road, Ahilyanagar.</p>
+      <p><strong>Phone:</strong> 8956007459</p>
+
+      <!-- ✅ Buttons -->
+      <div class="branch-buttons">
+        <button class="btn-contact" onclick="showForm('branch2Form')">Contact</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Branch Forms (hidden by default) -->
+  <div id="headOfficeForm" class="branch-form" style="display:none;">
+    <h3 style="color:white;">Head Office Contact Form</h3>
+    <form action="contact.php" method="POST">
+      <input class="head" name="branch_name" value="Head Office" type="text" readonly>
+      <input type="text" name="first_name" placeholder="First Name" required>
+      <input type="text" name="last_name" placeholder="Last Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="phone" placeholder="Your Phone" required>
+      <textarea name="comments" placeholder="Message for Head Office" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <div id="branch2Form" class="branch-form" style="display:none;">
+    <h3 style="color:white;">Branch 2 Contact Form</h3>
+    <form action="contact.php" method="POST">
+      <input class="head" name="branch_name" value="Branch 2" type="text" readonly>
+      <input type="text" name="first_name" placeholder="First Name" required>
+      <input type="text" name="last_name" placeholder="Last Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="phone" placeholder="Your Phone" required>
+      <textarea name="comments" placeholder="Message for Branch 2" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  
+    <hr style="border: none; height: 8px; background: black;  margin: 30px 0; ">
+    <!-- ✅ FOOTER from your original code -->
+  <!-- Footer Starts -->
+<footer style="background-color: #222; color: #fff; padding: 40px 20px; font-family: Arial, sans-serif;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 30px;">
+
+        <!-- Left Side: Icons + YouTube Video -->
+        <div style="flex: 1 1 300px; min-width: 300px;">
+            <div style="display: flex; gap: 15px; font-size: 24px; margin-bottom: 20px;">
+                <a href="https://www.instagram.com/shoratinnovations" target="_blank"
+                    style="color: #E1306C; text-decoration: none;"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/shorat-innovations/" target="_blank"
+                    style="color: #0077b5; text-decoration: none;"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/@Programming_with_akshay_sir" target="_blank"
+                    style="color: red; text-decoration: none;"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.facebook.com/share/vESBnTsrXPKB7SqC/?mibextid=LQQJ4d" target="_blank"
+                    style="color: #4267B2; text-decoration: none;"><i class="fab fa-facebook-f"></i></a>
+            </div>
+
+            <div style="background-color: #333; padding: 10px; border-radius: 8px; display: inline-block;">
+                <iframe width="320" height="180"
+                    src="https://www.youtube.com/embed/UrdjsutyXUs?si=2ep2Vq5wA6iiSjE2"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                    style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Right Side: Three Columns -->
+        <div style="flex: 2 1 600px; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+
+            <!-- Column 1: Pages -->
+            <div style="flex: 1; min-width: 150px;">
+                <h3 style="font-size: 18px; margin-bottom: 15px;">Pages</h3>
+                <ul style="list-style: none; padding: 0; line-height: 2;">
+                    <li><a href="index.html" style="color: #ddd; text-decoration: none;">Home</a></li>
+                    <li><a href="about-us.html" style="color: #ddd; text-decoration: none;">About Us</a></li>
+                    <li><a href="services.html" style="color: #ddd; text-decoration: none;">Our Services</a></li>
+                    <li><a href="courses.html" style="color: #ddd; text-decoration: none;">Courses</a></li>
+                    <li><a href="internship.html" style="color: #ddd; text-decoration: none;">Internship</a></li>
+                    <li><a href="contact.html" style="color: #ddd; text-decoration: none;">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2: Services -->
+            <div style="flex: 1; min-width: 150px;">
+                <h3 style="font-size: 18px; margin-bottom: 15px;">Services</h3>
+                <ul style="list-style: none; padding: 0; line-height: 2;">
+                    <li><a href="services.html" style="color: #ddd; text-decoration: none;">Mobile App</a></li>
+                    <li><a href="services.html" style="color: #ddd; text-decoration: none;">Software Development</a></li>
+                    <li><a href="services.html" style="color: #ddd; text-decoration: none;">Web Development</a></li>
+                    <li><a href="services.html" style="color: #ddd; text-decoration: none;">Graphic Design</a></li>
+                    <li><a href="services.html" style="color: #ddd; text-decoration: none;">Digital Media Marketing</a></li>
+                    <li><a href="services.html" style="color: #ddd; text-decoration: none;">Billing Software</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Courses -->
+            <div style="flex: 1; min-width: 150px;">
+                <h3 style="font-size: 18px; margin-bottom: 15px;">Courses</h3>
+                <ul style="list-style: none; padding: 0; line-height: 2;">
+                    <li><a href="courses.html" style="color: #ddd; text-decoration: none;">Full Stack Development</a></li>
+                    <li><a href="courses.html" style="color: #ddd; text-decoration: none;">Web Development</a></li>
+                    <li><a href="courses.html" style="color: #ddd; text-decoration: none;">Data Analyst</a></li>
+                    <li><a href="courses.html" style="color: #ddd; text-decoration: none;">Android Development</a></li>
+                    <li><a href="courses.html" style="color: #ddd; text-decoration: none;">Data Science</a></li>
+                    <li><a href="courses.html" style="color: #ddd; text-decoration: none;">Flutter Development</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<!-- Scroll to top button -->
+<a href="#" id="scroll-to-top"
+    style="position: fixed; bottom: 30px; right: 30px; background: #ff9800; color: #fff; padding: 10px 15px; border-radius: 50%; text-decoration: none; font-size: 20px;">
+    <i class="fa fa-angle-up"></i>
+</a>
+
+
+<div class="copyrights">
+    <div class="container">
+        <div class="footer-distributed" style="margin-bottom: 50px;">
+            <div class="footer-left">
+                <p class="footer-company-name">All Rights Reserved. &copy; 2024 <a href="#">Shorat Innovations Pvt Ltd</a> </p>
+            </div>
+
+
+        </div>
+    </div><!-- end container -->
+</div><!-- end copyrights -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- JS -->
+
+    <!-- JS -->
+<script src="js/all.js"></script>
+<script src="js/custom.js"></script>
+<script>
+  function showForm(formId) {
+    document.querySelectorAll(".branch-form").forEach(div => div.style.display = "none");
+    document.getElementById(formId).style.display = "block";
+    window.scrollTo({ top: document.getElementById(formId).offsetTop - 100, behavior: 'smooth' });
+  }
+
+  // Handle form submission for both branch forms
+  document.querySelectorAll(".branch-form form").forEach(form => {
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const formData = new FormData();
+      formData.append("first_name", form.querySelector('input[placeholder="First Name"]').value);
+      formData.append("last_name", form.querySelector('input[placeholder="Last Name"]').value);
+      formData.append("email", form.querySelector('input[placeholder="Your Email"]').value);
+      formData.append("phone", form.querySelector('input[placeholder="Your Phone"]').value);
+      formData.append("comments", form.querySelector('textarea').value);
+      formData.append("branch_name", form.querySelector(".head").value);
+
+
+
+
+      fetch("contact.php", {
+        method: "POST",
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.status === "success") {
+          alert("✅ Message sent successfully !!");
+          form.reset();
+        } else {
+          alert("❌ " + data.message);
+        }
+      })
+      .catch(error => {
+        console.error("Error:", error);
+        alert("❌ Submission failed. Please try again.");
+      });
+    });
+  });
+</script>
+
+    <script src="js/all.js"></script>
+      <script src="js/custom.js"></script>
+      <script>
+        function showForm(formId) {
+          document.querySelectorAll(".branch-form").forEach(div => div.style.display = "none");
+          document.getElementById(formId).style.display = "block";
+          window.scrollTo({ top: document.getElementById(formId).offsetTop - 100, behavior: 'smooth' });
+        }
+      </script>
+
+
+      <script>
+        const whatsappDiv = document.createElement('a');
+        whatsappDiv.href = "https://wa.me/918956569681?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services.";
+        whatsappDiv.target = "_blank";
+        whatsappDiv.id = "whatsappButton";
+        whatsappDiv.innerHTML = '<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">';
+        document.body.appendChild(whatsappDiv);
+      </script>
+
+     
+
+</body>
+</html>
+

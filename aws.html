@@ -306,6 +306,81 @@
                 padding: 0 8px;
             }
         }
+          /* Enroll Button */
+.lightning-btn {
+    background: linear-gradient(135deg, #d70004, #dc000b);
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 8px 20px rgba(177, 0, 9, 0.3);
+    transition: all 0.3s ease;
+    width: 65%;
+    display: block;
+    text-align: center;
+}
+
+.lightning-btn:hover {
+    background: linear-gradient(135deg, rgb(199, 63, 69), #de3a42);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(220, 0, 11, 0.5);
+}
+
+/* Benefits Box */
+.benefits-box {
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    border-radius: 15px;
+    padding: 25px 20px;
+    margin: 20px auto;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 400px;
+}
+
+.benefits-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.benefits-box h3 {
+    text-align: center;
+    color: #dc000b;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 18px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.benefits-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.benefits-box ul li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #333;
+    transition: color 0.3s, font-weight 0.3s;
+}
+
+.benefits-box ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #dc000b;
+    font-weight: bold;
+}
+
+.benefits-box ul li:hover {
+    color: #dc000b;
+    font-weight: bold;
+}
     </style>
 </head>
 <body>

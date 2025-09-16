@@ -240,7 +240,57 @@
         /* } */
         /* .footer .col-md-4 {
   padding: 0 50px; add horizontal padding
-}  */
+}  */       
+
+    /* # Service Cards */
+    .about-item:hover {
+            border-color: #e60000;
+            box-shadow: 0 6px 14px rgba(230,0,0,0.2);
+            transform: translateY(-5px);
+        }
+        .about-item {
+        border: 1px solid #ddd;
+        border-radius: 8px;   /* ⬅️ adjust this value (smaller = less curve) */
+        padding: 20px;
+        background: #fff;
+        transition: all 0.3s ease;
+    }
+
+        /* Icon */
+        .about-item .about-icon span {
+            font-size: 40px;
+            color: #e60000;
+            /* margin-bottom: 15px; */
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        .about-item:hover .about-icon span {
+            margin-bottom: -50px;
+            border: 1px solid #ddd;
+            color: #b30000; /* darker red on hover */
+        }
+
+        /* Title */
+        .about-item h3 {
+            font-weight: bold;
+            /* margin-top:10px ; */
+            color: #1a1a1a;
+        }
+
+        /* Text */
+        .about-item p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+
+      /* Show effect on hover */
+      .service-card:hover::before {
+        opacity: 1;
+      }
+
 
         .footer .social-media1 {
             display: flex;

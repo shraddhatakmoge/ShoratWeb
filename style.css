@@ -521,7 +521,7 @@ li.social-links a {
     background-image: url("slider_02.jpg");
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: None;
+    background-size: cover;
 }
 
 .slider-bg-three {
@@ -635,6 +635,30 @@ li.social-links a {
 	top: 0%;
 	left: 100%;
 	z-index: 1
+}
+/* Make the overlay cover only its slider, not next section */
+.home-one-slider-otem::before {
+  left: 0;              /* was 100% */
+  z-index: 0;           /* lower than content below */
+}
+
+/* Force About section to be on top of overlay */
+#about, .about-section {
+  position: relative;
+  z-index: 2;           /* above overlay */
+  background-color: #fff; /* optional: to block background bleeding */
+}
+
+/* Make sure slider ends cleanly */
+.slider-content-area {
+  height: auto;         /* don't lock at 100vh on small screens */
+  min-height: 650px;    /* keep desktop height */
+}
+
+@media (max-width:1000px) {
+  .slider-content-area {
+    min-height: 400px;  /* shrink slider height for mobile */
+  }
 }
 
 

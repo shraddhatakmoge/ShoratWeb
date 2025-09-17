@@ -425,9 +425,9 @@
     body.app_version .btn-light i {
         display: none !important;
     }
-    .copyrights {
+    /* .copyrights {
         padding: 40px 10px;
-    }
+    } */
     .footer-distributed {
         padding: 0;
     }
